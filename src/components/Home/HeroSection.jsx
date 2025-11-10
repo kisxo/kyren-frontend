@@ -1,72 +1,17 @@
-import React, { useEffect, useRef, useState } from "react";
-import IMAGES from "../../img/image";
-import "./HeroSection.css";
-import Slider from "react-slick";
+import { Carousel } from "flowbite-react";
 
-const HeroSection = () => {
-  const arrowRef = useRef();
-
-  var settings = {
-    dots: true,
-    infinite: true,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    autoplay: true,
-    speed: 300,
-    autoplaySpeed: 3000,
-    cssEase: "ease",
-    nextArrow: false,
-    prevArrow: false,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
-          infinite: true,
-        },
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          initialSlide: 2,
-        },
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
-    ],
-  };
-
+const HeroSection = (props) => {
   return (
-    <>
-      <div className="hero-container">
-        <Slider ref={arrowRef} {...settings}>
-          <div>
-            <img src={IMAGES?.banner1} className="d-block w-100" alt="..." />
-          </div>
-          <div>
-            <img src={IMAGES?.banner2} className="d-block w-100" alt="..." />
-          </div>
-          <div>
-            <img src={IMAGES?.banner3} className="d-block w-100" alt="..." />
-          </div>
-           <div>
-            <img src={IMAGES?.banner4} className="d-block w-100" alt="..." />
-          </div>
-           {/* <div>
-            <img src={IMAGES?.banner5} className="d-block w-100" alt="..." />
-          </div> */}
-        </Slider>
-      </div>
-    </>
+    <div className="h-56 sm:h-64 xl:h-80 2xl:h-96">
+      <Carousel leftControl="left" rightControl="right">
+        <img src="https://flowbite.com/docs/images/carousel/carousel-1.svg" alt="..." />
+        <img src="https://flowbite.com/docs/images/carousel/carousel-2.svg" alt="..." />
+        <img src="https://flowbite.com/docs/images/carousel/carousel-3.svg" alt="..." />
+        <img src="https://flowbite.com/docs/images/carousel/carousel-4.svg" alt="..." />
+        <img src="https://flowbite.com/docs/images/carousel/carousel-5.svg" alt="..." />
+      </Carousel>
+    </div>
   );
-};
+}
 
 export default HeroSection;
