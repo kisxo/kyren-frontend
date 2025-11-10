@@ -66,7 +66,7 @@ const Home = (props) => {
 
   return (
     <Layout>
-      {/* <HeroSection /> */}
+      <HeroSection />
       <QuickActions />
       <Games productsList={props.productsList} title={"Popular Games Top-Up"} />
     </Layout>

@@ -89,7 +89,7 @@ const Leaderboard = () => {
                                         <td className="total-amount">
                                             {" "}
                                             {topBuyers[i].totalAmount}{" "}
-                                            <KeyboardDoubleArrowRight />{" "}
+                                            {/* <KeyboardDoubleArrowRight />{" "} */}
                                         </td>
                                     </>
                                 )}
