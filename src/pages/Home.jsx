@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
-import { Link, useNavigate, useParams } from "react-router";
+import { useEffect, useState } from "react";
+import { useNavigate, useParams } from "react-router";
 import { useDispatch } from "react-redux";
 import { setUser } from "../redux/features/userSlice.js";
 import { message } from "antd";
@@ -66,20 +66,10 @@ const Home = (props) => {
 
   return (
     <Layout>
-      {/* <NotificationSlider /> */}
-      {showPopup && display === "yes" && (
-        <div className="popup-container">
-          <div>
-            <CancelIcon onClick={handleClosePopup} className="icon" />
-          </div>
-          <Link target="_blank" to={link}>
-            <img src={image} alt="popup-img" />
-          </Link>
-        </div>
-      )}
-      <HeroSection />
+      {/* <HeroSection /> */}
       <QuickActions />
       <Games productsList={props.productsList} title={"Popular Games Top-Up"} />
+      hello
     </Layout>
   );
 };

@@ -60,7 +60,6 @@ function App() {
     // }
 
     return (
-        <div className="bg-animation-container">
         <BrowserRouter>
             <Routes>
                 {/* pages */}
@@ -274,7 +273,6 @@ function App() {
                 />
             </Routes>
         </BrowserRouter>
-      </div>
     );
 }
 

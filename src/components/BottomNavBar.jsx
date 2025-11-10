@@ -56,8 +56,8 @@ const BottomNavBar = () => {
     ScrollToTop();
 
     return (
-        <div className="fixed bottom-0 w-full bg-amber-400">
-            <div className="h-40 w-40"><GoHomeFill className="size-15"/></div>
+        <div className="fixed bottom-0 w-full bg-amber-400 p-2">
+            <div><GoHomeFill className="size-10"/></div>
             {/* <WorkspacePremium /> */}
             {/* <Person /> */}
             {/* <FormatListBulletedIcon /> */}
