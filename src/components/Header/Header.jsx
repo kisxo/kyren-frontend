@@ -13,6 +13,7 @@ import "tippy.js/themes/light.css";
 import SearchContainer from "../SearchContainer.jsx";
 import getUserData from "../../utils/userDataService.js";
 import logo from "./../../assets/logo.png";
+import { LuGamepad2 } from "react-icons/lu";
 
 const Header = () => {
     const { user } = useSelector((state) => state.user);
@@ -35,6 +36,7 @@ const Header = () => {
                 <div className="logo flex align-middle items-center" onClick={() => navigate("/")}>
                     <img src={logo} className="size-10" alt="" />
                     <span className="font-bold">Kyren Official Store</span> 
+                    <LuGamepad2/>
                 </div>
 
                 {user ? (

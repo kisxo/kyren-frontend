@@ -110,7 +110,7 @@ const AdminDashboard = () => {
             </h1>
             <span>Total Orders</span>
           </div>
-          <PointOfSaleIcon className="icon" />
+          {/* <PointOfSaleIcon className="icon" /> */}
         </div>
         <div className="dash-card" onClick={() => navigate("/admin-products")}>
           <div className="count">
@@ -125,7 +125,7 @@ const AdminDashboard = () => {
             </h1>
             <span>Total Products</span>
           </div>
-          <StayCurrentPortraitIcon className="icon" />
+          {/* <StayCurrentPortraitIcon className="icon" /> */}
         </div>
         <div className="dash-card" onClick={() => navigate("/admin-payments")}>
           <div className="count">
@@ -140,7 +140,7 @@ const AdminDashboard = () => {
             </h1>
             <span>Total Sales</span>
           </div>
-          <MonetizationOnIcon className="icon" />
+          {/* <MonetizationOnIcon className="icon" /> */}
         </div>
       </div>
     </AdminLayout>

@@ -132,7 +132,7 @@ const Register = () => {
                     placeholder="Password"
                   />
                 </div>
-                <button className="register-btn" onClick={handleRegister}>
+                <button className="bg-amber-400" onClick={handleRegister}>
                   Create Now
                 </button>
                 <div className="forgot-pass d-flex justify-content-between">

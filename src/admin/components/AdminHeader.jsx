@@ -23,12 +23,12 @@ const AdminHeader = () => {
       <div className="admin-tools">
         {/* <SearchIcon /> */}
         {/* <NotificationsIcon /> */}
-        <LogoutIcon onClick={handleLogout} />
-        <DragHandleIcon
+        {/* <LogoutIcon onClick={handleLogout} /> */}
+        {/* <DragHandleIcon
           onClick={() => setMenu(!menu)}
           className="d-block d-md-block d-lg-none"
-        />
-        <AdminSidemenu menu={menu} setMenu={setMenu} />
+        /> */}
+        {/* <AdminSidemenu menu={menu} setMenu={setMenu} /> */}
       </div>
     </div>
   );

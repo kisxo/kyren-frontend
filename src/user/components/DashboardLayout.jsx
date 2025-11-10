@@ -40,7 +40,7 @@ const DashboardLayout = ({ children }) => {
             style={{ cursor: "pointer" }}
             onClick={handleLogout}
           >
-            <LogoutIcon className="me-2" />
+            {/* <LogoutIcon className="me-2" /> */}
             Logout
           </li>
         </ul>

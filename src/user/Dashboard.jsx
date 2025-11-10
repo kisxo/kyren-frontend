@@ -64,7 +64,7 @@ const Dashboard = () => {
               </h1>
               <span className="text-muted">Orders</span>
             </div>
-            <InstallMobileIcon className="icon" />
+            {/* <InstallMobileIcon className="icon" /> */}
           </div>
           {/* <div
             className="dash-card dash w-100 w-lg-50"

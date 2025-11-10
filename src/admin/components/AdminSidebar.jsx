@@ -11,7 +11,7 @@ const AdminSidebar = () => {
       <ul>
         <li>
           <Link to="/admin-dashboard">
-            <HomeIcon className="me-2 icon" />
+            {/* <HomeIcon className="me-2 icon" /> */}
             Dashboard
           </Link>
         </li>
@@ -22,31 +22,31 @@ const AdminSidebar = () => {
       <ul>
         <li>
           <Link to="/admin-orders">
-            <ReceiptIcon className="me-2 icon" />
+            {/* <ReceiptIcon className="me-2 icon" /> */}
             Orders
           </Link>
         </li>
         <li>
           <Link to="/admin-products">
-            <InventoryIcon className="me-2 icon" />
+            {/* <InventoryIcon className="me-2 icon" /> */}
             Products
           </Link>
         </li>
         <li>
           <Link to="/admin-users">
-            <GroupIcon className="me-2 icon" />
+            {/* <GroupIcon className="me-2 icon" /> */}
             Customers
           </Link>
         </li>
         <li>
           <Link to="/admin-payments">
-            <PaymentIcon className="me-2 icon" />
+            {/* <PaymentIcon className="me-2 icon" /> */}
             Payments
           </Link>
         </li>
         <li>
           <Link to="/admin-accounts">
-            <ContactEmergency className="me-2 icon" />
+            {/* <ContactEmergency className="me-2 icon" /> */}
             Accounts
           </Link>
         </li>
