@@ -43,14 +43,10 @@ const BottomNavBar = () => {
     };
 
     const handleLogout = () => {
-    if (!window.confirm("Are you sure you want to logout?")) return;
-
-    localStorage.clear();
-    dispatch(clearUser());
-    message.success("Logout Successful");
-
-    // Redirect to login or home
-    window.location.href = "/login"; // or "/"
+        localStorage.clear();
+        dispatch(clearUser());
+        message.success("Logout Successful");
+        navigate("/login");
     };
 
     const { pathname } = useLocation();
@@ -85,10 +81,10 @@ const BottomNavBar = () => {
                 <span>Orders</span>
             </Link>
             {user ? (
-                <div onClick={handleLogout} className="flex flex-col items-center">
+                <Link onClick={handleLogout} className="flex flex-col items-center">
                     <MdLogout className="size-6" />
                     <span>Logout</span>
-                </div>
+                </Link>
             ) : (
                 <Link to={"/login"} className="flex flex-col items-center">
                     <MdLogin className="size-6" />
