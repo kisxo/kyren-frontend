@@ -1,4 +1,3 @@
-// import "./App.css";
 import { BrowserRouter, Route, Routes } from "react-router";
 import { useEffect, useState } from "react";
 import Home from "./pages/Home";
@@ -57,163 +56,160 @@ function App() {
         return () => clearTimeout(timer);
     }, []);
 
-    if (loading) {
-      return <LoadingPage />;
-    }
+    // if (loading) {
+    //   return <LoadingPage />;
+    // }
 
     return (
         <div className="bg-animation-container">
-            <BrowserRouter className="bg-green-500">
-                <Routes>
-                    {/* pages */}
-                    <Route
-                        path="/"
-                        element={
-                            <Home
-                                className="aa"
-                                productsList={productsList}
-                            ></Home>
-                        }
-                    />
-                    <Route
-                        path="/register"
-                        element={
-                            <PublicRoute>
-                                <Register />
-                            </PublicRoute>
-                        }
-                    />
-                    <Route
-                        path="/privacy-policy"
-                        element={
-                            <PublicRoute>
-                                <PrivacyPolicy />
-                            </PublicRoute>
-                        }
-                    />
-                    <Route
-                        path="/terms"
-                        element={
-                            <PublicRoute>
-                                <Terms />
-                            </PublicRoute>
-                        }
-                    ></Route>
-                    <Route
-                        path="/refund-policy"
-                        element={
-                            <PublicRoute>
-                                <RefundPolicy />
-                            </PublicRoute>
-                        }
-                    ></Route>
-                    <Route
-                        path="/login"
-                        element={
-                            <PublicRoute>
-                                <Login />
-                            </PublicRoute>
-                        }
-                    />
-                    <Route path="/forgot-password" element={<ForgotPass />} />
-                    <Route path="/games" element={<ProductPage />} />
-                    <Route
-                        path="/product/:name?"
-                        element={<ProductInfo productsList={productsList} />}
-                    />
-                    <Route
-                        path="/orders"
-                        element={
-                            <ProtectedRoute>
-                                <Orders />
-                            </ProtectedRoute>
-                        }
-                    />
-                    <Route
-                        path="/my-account"
-                        element={
-                            <ProtectedRoute>
-                                <Account />
-                            </ProtectedRoute>
-                        }
-                    />
-                    <Route
-                        path="/view-order/:orderId?"
-                        element={
-                            <ProtectedRoute>
-                                <ViewOrder />
-                            </ProtectedRoute>
-                        }
-                    />
-                    <Route path="/terms" element={<Terms />} />
-                    {/* <Route path="/rankBoost" element={<Rankboosting/>}/> */}
-                    <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-                    <Route path="/refund-policy" element={<RefundPolicy />} />
-                    <Route path="/leaderboard" element={<Leaderboard />} />
+        <BrowserRouter>
+            <Routes>
+                {/* pages */}
+                <Route
+                    path="/"
+                    element={
+                        <Home className="aa" productsList={productsList}></Home>
+                    }
+                />
+                <Route
+                    path="/register"
+                    element={
+                        <PublicRoute>
+                            <Register />
+                        </PublicRoute>
+                    }
+                />
+                <Route
+                    path="/privacy-policy"
+                    element={
+                        <PublicRoute>
+                            <PrivacyPolicy />
+                        </PublicRoute>
+                    }
+                />
+                <Route
+                    path="/terms"
+                    element={
+                        <PublicRoute>
+                            <Terms />
+                        </PublicRoute>
+                    }
+                ></Route>
+                <Route
+                    path="/refund-policy"
+                    element={
+                        <PublicRoute>
+                            <RefundPolicy />
+                        </PublicRoute>
+                    }
+                ></Route>
+                <Route
+                    path="/login"
+                    element={
+                        <PublicRoute>
+                            <Login />
+                        </PublicRoute>
+                    }
+                />
+                <Route path="/forgot-password" element={<ForgotPass />} />
+                <Route path="/games" element={<ProductPage />} />
+                <Route
+                    path="/product/:name?"
+                    element={<ProductInfo productsList={productsList} />}
+                />
+                <Route
+                    path="/orders"
+                    element={
+                        <ProtectedRoute>
+                            <Orders />
+                        </ProtectedRoute>
+                    }
+                />
+                <Route
+                    path="/my-account"
+                    element={
+                        <ProtectedRoute>
+                            <Account />
+                        </ProtectedRoute>
+                    }
+                />
+                <Route
+                    path="/view-order/:orderId?"
+                    element={
+                        <ProtectedRoute>
+                            <ViewOrder />
+                        </ProtectedRoute>
+                    }
+                />
+                <Route path="/terms" element={<Terms />} />
+                {/* <Route path="/rankBoost" element={<Rankboosting/>}/> */}
+                <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+                <Route path="/refund-policy" element={<RefundPolicy />} />
+                <Route path="/leaderboard" element={<Leaderboard />} />
 
-                    <Route path="/game-accounts" element={<GameAccounts />} />
+                <Route path="/game-accounts" element={<GameAccounts />} />
 
-                    {/* ======================== USER PAGES =============================== */}
-                    {/* ========== EMAIL VERIFY */}
-                    <Route
-                        path="/user-dashboard"
-                        element={
-                            <ProtectedRoute>
-                                <Dashboard />
-                            </ProtectedRoute>
-                        }
-                    />
-                    {/* ======================== USER PAGES =============================== */}
-                    {/* ======================== ADMIN PAGES =============================== */}
-                    <Route
-                        path="/admin-dashboard"
-                        element={
-                            <ProtectedRoute>
-                                <AdminDashboard />
-                            </ProtectedRoute>
-                        }
-                    />
-                    <Route
-                        path="/admin-orders"
-                        element={
-                            <ProtectedRoute>
-                                <AdminOrder />
-                            </ProtectedRoute>
-                        }
-                    />
-                    <Route
-                        path="/admin-view-order/:orderId?"
-                        element={
-                            <ProtectedRoute>
-                                <AdminViewOrder />
-                            </ProtectedRoute>
-                        }
-                    />
-                    <Route
-                        path="/admin-products"
-                        element={
-                            <ProtectedRoute>
-                                <AdminProduct />
-                            </ProtectedRoute>
-                        }
-                    />
-                    <Route
-                        path="/admin-accounts"
-                        element={
-                            <ProtectedRoute>
-                                <AdminAccount />
-                            </ProtectedRoute>
-                        }
-                    />
-                    <Route
-                        path="/admin-add-account"
-                        element={
-                            <ProtectedRoute>
-                                <AdminAddAccount />
-                            </ProtectedRoute>
-                        }
-                    />
-                    {/* <Route
+                {/* ======================== USER PAGES =============================== */}
+                {/* ========== EMAIL VERIFY */}
+                <Route
+                    path="/user-dashboard"
+                    element={
+                        <ProtectedRoute>
+                            <Dashboard />
+                        </ProtectedRoute>
+                    }
+                />
+                {/* ======================== USER PAGES =============================== */}
+                {/* ======================== ADMIN PAGES =============================== */}
+                <Route
+                    path="/admin-dashboard"
+                    element={
+                        <ProtectedRoute>
+                            <AdminDashboard />
+                        </ProtectedRoute>
+                    }
+                />
+                <Route
+                    path="/admin-orders"
+                    element={
+                        <ProtectedRoute>
+                            <AdminOrder />
+                        </ProtectedRoute>
+                    }
+                />
+                <Route
+                    path="/admin-view-order/:orderId?"
+                    element={
+                        <ProtectedRoute>
+                            <AdminViewOrder />
+                        </ProtectedRoute>
+                    }
+                />
+                <Route
+                    path="/admin-products"
+                    element={
+                        <ProtectedRoute>
+                            <AdminProduct />
+                        </ProtectedRoute>
+                    }
+                />
+                <Route
+                    path="/admin-accounts"
+                    element={
+                        <ProtectedRoute>
+                            <AdminAccount />
+                        </ProtectedRoute>
+                    }
+                />
+                <Route
+                    path="/admin-add-account"
+                    element={
+                        <ProtectedRoute>
+                            <AdminAddAccount />
+                        </ProtectedRoute>
+                    }
+                />
+                {/* <Route
           path="/admin-add-banner"
           element={
             <ProtectedRoute>
@@ -221,15 +217,15 @@ function App() {
             </ProtectedRoute>
           }
         /> */}
-                    <Route
-                        path="/admin-add-product"
-                        element={
-                            <ProtectedRoute>
-                                <AdminAddProduct />
-                            </ProtectedRoute>
-                        }
-                    />
-                    {/* <Route
+                <Route
+                    path="/admin-add-product"
+                    element={
+                        <ProtectedRoute>
+                            <AdminAddProduct />
+                        </ProtectedRoute>
+                    }
+                />
+                {/* <Route
           path="/admin-edit-product/:id?"
           element={
             <ProtectedRoute>
@@ -237,7 +233,7 @@ function App() {
             </ProtectedRoute>
           }
         /> */}
-                    {/* <Route
+                {/* <Route
           path="/admin-edit-groups/:id?"
           element={
             <ProtectedRoute>
@@ -245,7 +241,7 @@ function App() {
             </ProtectedRoute>
           }
         /> */}
-                    {/* <Route
+                {/* <Route
           path="/admin-add-tab/:id?"
           element={
             <ProtectedRoute>
@@ -253,33 +249,33 @@ function App() {
             </ProtectedRoute>
           }
         /> */}
-                    <Route
-                        path="/admin-users"
-                        element={
-                            <ProtectedRoute>
-                                <AdminUsers />
-                            </ProtectedRoute>
-                        }
-                    />
-                    <Route
-                        path="/admin-edit-user/:id?"
-                        element={
-                            <ProtectedRoute>
-                                <EditUser />
-                            </ProtectedRoute>
-                        }
-                    />
-                    <Route
-                        path="/admin-payments"
-                        element={
-                            <ProtectedRoute>
-                                <AdminPayments />
-                            </ProtectedRoute>
-                        }
-                    />
-                </Routes>
-            </BrowserRouter>
-        </div>
+                <Route
+                    path="/admin-users"
+                    element={
+                        <ProtectedRoute>
+                            <AdminUsers />
+                        </ProtectedRoute>
+                    }
+                />
+                <Route
+                    path="/admin-edit-user/:id?"
+                    element={
+                        <ProtectedRoute>
+                            <EditUser />
+                        </ProtectedRoute>
+                    }
+                />
+                <Route
+                    path="/admin-payments"
+                    element={
+                        <ProtectedRoute>
+                            <AdminPayments />
+                        </ProtectedRoute>
+                    }
+                />
+            </Routes>
+        </BrowserRouter>
+      </div>
     );
 }
 

@@ -74,17 +74,19 @@ const Layout = ({ children }) => {
     ScrollToTop();
 
     return (
-        <>
+        <div className="h-screen flex flex-col">
             <Header />
-            <div className="body bg-amber-600 p-5">{children}</div>
+                <div className="grow">{children}</div>
             <Footer />
-        </>
-    );
+            
+        </div>
+    )
+
     return (
         <Box>
-            <List style={{ backgroundColor: "#666" }}>
+            <List style={{ backgroundColor: "#111" }}>
                 <Header />
-                <div className="body bg-amber-600 p-5">{children}</div>
+                <div className="body">{children}</div>
                 <Footer />
             </List>
             <Paper
