@@ -10,13 +10,21 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.1",
+    "@mui/icons-material": "^7.3.5",
+    "@mui/material": "^7.3.5",
     "@reduxjs/toolkit": "^2.10.1",
     "@tailwindcss/vite": "^4.1.17",
+    "@tippyjs/react": "^4.2.6",
+    "antd": "^5.28.0",
     "axios": "^1.13.2",
     "crypto-js": "^4.2.0",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
     "react-redux": "^9.2.0",
+    "react-router": "^7.9.5",
+    "react-slick": "^0.31.0",
     "tailwindcss": "^4.1.17"
   },
   "devDependencies": {
