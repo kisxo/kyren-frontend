@@ -1,0 +1,76 @@
+.item-card{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    gap: .5rem;
+    padding-top: .5rem;
+    border-radius: .3rem;
+    position: relative;
+
+    font-size: .9rem;
+    color: #ddd;
+
+    img{
+        min-height: 50px;
+        max-height: 50px;
+        max-width: 50px;
+        min-width: 50px;
+        object-fit: contain;
+    }
+
+    .card-price{
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        .price{
+            color: white;
+            font-size: 1.2rem;
+        }
+        .cost{
+            color: #bbb;
+           text-decoration: line-through !important;
+            font-size: .9rem;
+        }
+    }
+}
+
+@property --gradient-angle{
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+.package-container .active{
+    .item-card::before,
+    .item-card::after {
+        --a: #ff0000;
+        --b: #00ff00;
+        --c: #0000ff;
+        z-index: -1;
+
+        content: "";
+        position: absolute;
+        inset: -4px;
+        border-radius: inherit;
+        background-color: aquamarine;
+        background: conic-gradient(
+            from var(--gradient-angle),
+            var(--a),
+            var(--b),
+            var(--c),
+            var(--b),
+            var(--a)
+        );
+        animation: rotation 15s linear infinite;
+    }
+}
+
+.item-card::after{
+    filter: blur(3.5rem);
+}
+
+@keyframes rotation{
+    0% { --gradient-angle: 0deg;}
+    100% { --gradient-angle: 360deg;}
+}

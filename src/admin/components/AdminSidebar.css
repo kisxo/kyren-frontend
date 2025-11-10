@@ -1,0 +1,12 @@
+.admin-sidebar-container li {
+  margin: 20px 0;
+}
+.admin-sidebar-container a {
+  color: #fff;
+}
+.admin-sidebar-container span {
+  font-weight: 100;
+}
+.admin-sidebar-container .icon {
+  color: var(--t);
+}

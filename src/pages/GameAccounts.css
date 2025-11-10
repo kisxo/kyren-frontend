@@ -1,0 +1,41 @@
+.game-account-container{
+  color: #eee;
+  min-height: max-content;
+  /* padding: 1rem; */
+
+  .title{
+    font-size: 1.8rem;
+    font-weight: bolder;
+    margin-bottom: 0.5rem;
+    padding: 1rem;
+  }
+
+  .description{
+    font-size: 1rem;
+    color: #bbb;
+    margin-bottom: 1rem;
+  }
+
+  .game-selector{
+    border-bottom: 1px solid #444;
+    display: flex;
+    padding-inline: 1rem;
+    /* gap: 2rem; */
+    overflow-x: scroll;
+
+    .game-selector-title{
+      white-space: nowrap;
+      padding-block: .5rem;
+      padding: .5rem 1rem;
+    }
+
+    .game-selector-title:active{
+      background-color: rgba(0, 102, 255, 0.181);
+      white-space: nowrap;
+    }
+
+    .game-selector-title.selected-game{
+     border-bottom: 3px solid #fff;
+    }
+  }
+}

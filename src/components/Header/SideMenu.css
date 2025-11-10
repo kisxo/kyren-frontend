@@ -1,0 +1,67 @@
+.sidemenu-container {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: clamp(250px, 70vw, 500px);
+  height: 100vh;
+  transition: all 0.3s ease;
+  z-index: 20;
+}
+.sidemenu {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-bottom: 200px;
+  position: relative;
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px); /* for Safari support */
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 0 40px;
+}
+.sidemenu .close-icon {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 35px;
+  color: #fff;
+}
+.sidemenu ul li {
+  margin: 20px 0;
+  padding-bottom: 10px;
+  border-bottom: 1px solid grey;
+}
+.sidemenu ul li a {
+  color: #fff;
+  font-size: 20px;
+}
+.sidemenu .logout {
+  color: #ebef29;
+  cursor: pointer;
+}
+.sidemenu .logout:hover {
+  color: #fff;
+}
+
+.sidemenu .logout .icon {
+  font-size: 25px;
+  margin-left: 5px;
+}
+.sidemenu-img {
+  width: 80px;
+  height: 80px;
+  border-radius: 100px;
+  object-fit: cover;
+  border: 3px solid #26bd68;
+  display: block;
+  margin: 0 auto;
+}
+.active {
+  left: 0;
+}
+.sidemenu-action-btn a {
+  color: #fff;
+  text-decoration: underline !important;
+  margin-top: 40px !important;
+}

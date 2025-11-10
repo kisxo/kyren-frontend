@@ -1,0 +1,173 @@
+.chart-container {
+  display: flex;
+  padding: 50px;
+  margin-bottom: 20px;
+  gap: 50px;
+  background-color: var(--p);
+  color: #fff;
+}
+.chartOne {
+  width: 50%;
+}
+.chartTwo {
+  width: 50%;
+}
+.admin-dashboard-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  color: #333;
+  .toggle-icon {
+    width: 80px;
+    height: 40px;
+    border-radius: 100px;
+    background-color: var(--p);
+    padding: 5px;
+    transition: 0.3s all ease;
+    cursor: pointer;
+    position: relative;
+  }
+  .toggle-icon.active {
+    justify-content: flex-end;
+  }
+  .toggle-icon .circlee {
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    width: 35px;
+    height: 35px;
+    transition: 0.3s all ease;
+    background-color: red;
+    transform: translateY(-50%);
+    border-radius: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .toggle-icon .circlee.active {
+    left: 50%;
+    background-color: green;
+  }
+}
+.dash-card {
+  width: 23%;
+  background-color: var(--p);
+  color: #fff;
+  height: 120px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  padding: 0 40px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  margin-right: 20px;
+}
+.dash-card:hover {
+  background-color: var(--p);
+  opacity: 0.8;
+}
+.dash-card .count {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.dash-card .icon {
+  font-size: 40px;
+  margin-bottom: 25px;
+  transition: 0.3s all ease;
+  color: var(--t);
+}
+.dash-card:hover.dash-card .icon {
+  font-size: 50px;
+}
+
+/* ================ */
+.admin-recent-things {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.recent-orders,
+.recent-queries {
+  width: 100%;
+  background-color: var(--p);
+  color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  overflow-x: scroll;
+  margin-bottom: 20px;
+}
+.recent-orders table {
+  color: red !important;
+  background-color: red !important;
+}
+
+.top-buyer {
+  width: 100%;
+  background-color: #fff;
+  color: #333;
+  padding: 20px;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+.toggle-icon {
+  width: 80px;
+  height: 40px;
+  border-radius: 100px;
+  background-color: #fff;
+  padding: 5px;
+  transition: 0.3s all ease;
+  cursor: pointer;
+  position: relative;
+}
+.toggle-icon.active {
+  justify-content: flex-end;
+}
+.toggle-icon .circlee {
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  width: 35px;
+  height: 35px;
+  transition: 0.3s all ease;
+  background-color: red;
+  transform: translateY(-50%);
+  border-radius: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.toggle-icon .circlee.active {
+  left: 50%;
+  background-color: var(--t);
+}
+
+@media screen and (max-width: 992px) {
+  .chart-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .chartOne,
+  .chartTwo {
+    width: 100%;
+  }
+  .dash-card {
+    width: 100%;
+    margin-right: 0;
+  }
+  .recent-orders,
+  .recent-queries {
+    width: 100%;
+    overflow-x: scroll;
+  }
+  .recent-queries {
+    margin-top: 20px;
+  }
+}

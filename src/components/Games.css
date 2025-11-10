@@ -1,0 +1,227 @@
+.explore-products-container {
+  padding: 1.5rem;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.title h5 {
+  color: var(--blue-600);
+  text-transform: uppercase;
+  font-weight: 800;
+}
+
+.games-list {
+  gap: 10px ;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.game {
+  margin-block: 0.5rem;
+  border-radius: 0.5rem;
+  font-size: 0.6rem;
+  font-weight: 600;
+  background-color: var(--primary-50);
+  outline: 1px solid var(--primary-100);
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.game > * {
+  padding: 0.5rem;
+}
+
+.top {
+  border-radius: 0.5rem 0.5rem 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+  background: repeating-linear-gradient(
+    140deg,
+    #06b6d4,
+    #06b6d4 10px,
+    #2ab7c4ca 20px,
+    #0b629c 10px
+  );
+  position: relative;
+}
+
+.top img {
+  height: 55px;
+  width: 55px;
+  border-radius: 0.5rem;
+}
+
+.right .name {
+  color: rgb(255, 255, 255);
+  font-size: 0.65rem;
+  font-weight: 600;
+  word-break: break-word;
+}
+
+.category-container {
+  position: absolute;
+  top: -10px;
+  right: 10px;
+  background: linear-gradient(45deg, #f80101, #eb7661);
+  border-radius: 12px;
+  padding: 4px 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  animation: shine 2s infinite ease-in-out;
+}
+
+.info {
+  color: white;
+  font-size: 0.6rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  animation: slideIn 0.5s ease-out forwards;
+}
+
+@keyframes shine {
+  0% {
+    box-shadow: 0 0 5px rgba(255, 107, 107, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 15px rgba(255, 107, 107, 1), 0 0 25px rgba(255, 142, 83, 0.8);
+  }
+  100% {
+    box-shadow: 0 0 5px rgba(255, 107, 107, 0.5);
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateX(20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.action {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  svg{
+    height: 10px;
+    width: 10px;
+  }
+}
+
+@media screen and (min-width: 1001px) {
+  .game {
+    width: 20%;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .game {
+    width: 25%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .game {
+    width: 47%;
+  }
+  .category-container {
+    right: 5px;
+    padding: 3px 6px;
+  }
+  .info {
+    font-size: 0.55rem;
+  }
+}
+
+.categories-tabs{
+  display: flex;
+  overflow-x: scroll;
+  gap: 1rem;
+  scrollbar-width: none;
+}
+
+.categories-tabs::-webkit-scrollbar{
+  display: none;
+}
+
+.category-tab-selector{
+  color: var(--primary-700);
+  text-transform: capitalize;
+  font-size: .8rem;
+  font-weight: bold;
+  background-color: #eee;
+  border: 1px solid rgba(3, 163, 255, 0.169);
+  padding: .6rem 1.5rem;
+  border-radius: 2rem;
+  white-space: nowrap;
+  display: inline-block;
+}
+
+.category-tab-selector.active{
+  background-color: var(--t);
+  border: none;
+  color: white;
+}
+
+.product-card{
+  /* background-color: rgb(43, 43, 43); */
+  border-radius: 5px;
+  /* overflow: hidden; */
+  /* display: flex; */
+  color: white;
+  font-size: .6rem;
+  text-align: center;
+  align-items: center;
+  font-weight: 700;
+  position: relative;
+  padding-top: 5%;
+  filter: drop-shadow(0 0 0 rgba(123, 123, 123, 0));
+  img{
+    border-radius: 5px;
+    width: 85%;
+  }
+  .product-name{
+    padding: 10px;
+  }
+  .product-tag{
+    padding: 5px;
+    top: 20px;
+    right: 0px;
+    background-color: yellow;
+    color: black;
+    font-weight: 500;
+    position: absolute;
+    filter: drop-shadow(0 0 0.75rem black);
+  }
+}
+
+.product-card::before{
+    z-index: -1;
+    content: "";
+    position: absolute;
+    inset: 0px;
+    border-radius: inherit;
+    background-color: #222;
+    border: .5px solid #666;
+    top: 25%;
+    animation: rotation 15s linear infinite;
+}
+
+@media screen and (min-width: 700px) {
+  .games-list {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .games-list {
+    grid-template-columns: repeat(7, 1fr);
+  }
+}

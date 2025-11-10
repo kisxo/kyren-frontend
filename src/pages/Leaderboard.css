@@ -1,0 +1,32 @@
+.leaderboard{
+    color: white;
+    background-color: var(--p);
+    padding: 1.5rem 5%;
+    table, thead, tbody, td, th{
+        font-size: .8rem;
+        background-color: var(--p);
+        color: white;
+    }
+    th{
+        
+    }
+    .total-amount{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .month-tab{
+        display: flex;
+        padding-bottom: 1rem;
+        &>*{
+            width: 50%;
+            text-align: center;
+            padding-block: .5rem;
+            background-color: rgb(46, 46, 46);
+        }
+    }
+
+    .active-tab{
+        background-color: var(--t);
+    }
+}

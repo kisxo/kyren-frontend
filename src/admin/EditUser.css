@@ -1,0 +1,32 @@
+.admin-edit-container {
+  background-color: #fff;
+  margin-top: 20px;
+  border-radius: 10px;
+  padding: 20px;
+  color: #333;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.edit-admin-user-img {
+  width: 20%;
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+}
+.edit-admin-user-img img {
+  width: 100%;
+}
+.edit-admin-user-form {
+  width: 78%;
+}
+
+@media screen and (max-width: 992px) {
+  .edit-admin-user-img {
+    width: 100%;
+    border: 0;
+    margin-bottom: 20px;
+  }
+  .edit-admin-user-form {
+    width: 100%;
+  }
+}
