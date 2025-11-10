@@ -248,15 +248,19 @@ const Register = () => {
                     <Link to="/forgot-password">Forgot Password?</Link>
                 </div>
             </form>
-            <div className="auth-footer">
-                <Link target="_blank" to="https://wa.me/916003251677">
-                    Contact Us
-                </Link>
-                <Link to="/terms">Terms & Conditions</Link>
-                <Link to="/privacy-policy">Privacy Policy</Link>
-                <Link to="/refund-policy">Refund Policy</Link>
-                <p>Copyright © 2023 Kyren Store</p>
-            </div>
+                  <div className="hidden md:block">
+                    <div className="auth-footer ">
+                    <Link target="_blank" to="https://wa.me/916003251677">Contact Us</Link>
+                    <Link to="/terms">Terms & Conditions</Link>
+                    <Link to="/privacy-policy">Privacy Policy</Link>
+                    <Link to="/refund-policy">Refund Policy</Link>
+                    <p>Copyright © 2023 Kyren Store</p>
+                  </div>
+                  </div>
+            
+                  <div className=" text-neutral-300/30 text-xs space-x-4 flex border-t border-400/20 w-full justify-evenly py-5 md:hidden">
+                    <div>Copyright © 2025 Kyren Official</div>
+                  </div>
         </div>
     );
 
