@@ -1,8 +1,4 @@
 import React, { useState } from "react";
-import SearchIcon from "@mui/icons-material/Search";
-import NotificationsIcon from "@mui/icons-material/Notifications";
-import LogoutIcon from "@mui/icons-material/Logout";
-import DragHandleIcon from "@mui/icons-material/DragHandle";
 import "./AdminLayout.css";
 import AdminSidemenu from "./AdminSidemenu";
 import { useNavigate } from "react-router";

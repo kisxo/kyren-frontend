@@ -1,7 +1,5 @@
 import React, { useEffect } from "react";
 import "./Header.css";
-import Person2Icon from "@mui/icons-material/Person2";
-import LogoutIcon from "@mui/icons-material/Logout";
 import { useNavigate } from "react-router";
 import { message } from "antd";
 import axios from "axios";

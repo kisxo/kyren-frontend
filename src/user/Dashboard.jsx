@@ -6,9 +6,6 @@ import "./Dashboard.css";
 import { useLocation, useNavigate, useParams } from "react-router";
 import DashboardLayout from "./components/DashboardLayout";
 import { message } from "antd";
-import InstallMobileIcon from "@mui/icons-material/InstallMobile";
-import LocationOnIcon from "@mui/icons-material/LocationOn";
-import AccountBalanceWalletIcon from "@mui/icons-material/AccountBalanceWallet";
 import getUserData from "../utils/userDataService";
 
 const Dashboard = () => {

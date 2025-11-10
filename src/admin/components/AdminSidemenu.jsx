@@ -1,13 +1,4 @@
 import React from "react";
-import HomeIcon from "@mui/icons-material/Home";
-import GroupIcon from "@mui/icons-material/Group";
-import CollectionsIcon from "@mui/icons-material/Collections";
-import CancelIcon from "@mui/icons-material/Cancel";
-import ReceiptIcon from "@mui/icons-material/Receipt";
-import HelpIcon from "@mui/icons-material/Help";
-import MobileScreenShareIcon from "@mui/icons-material/MobileScreenShare";
-import InventoryIcon from "@mui/icons-material/Inventory";
-import NotificationsActiveIcon from "@mui/icons-material/NotificationsActive";
 import { Link, useNavigate } from "react-router";
 
 const AdminSidemenu = ({ menu, setMenu }) => {

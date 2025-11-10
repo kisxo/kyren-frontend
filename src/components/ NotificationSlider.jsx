@@ -1,8 +1,5 @@
 import { useEffect } from "react";
 import "./NotificationSlider.css";
-import { pink } from '@mui/material/colors';
-import { Alert } from "@mui/material";
-import { AccessAlarm, WhatsApp, ElectricBolt, Discount} from "@mui/icons-material";
 
 function NotificationSlider () {
 

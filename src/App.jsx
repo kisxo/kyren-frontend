@@ -37,7 +37,6 @@ import AdminAddAccount from "./admin/AdminAddAccount";
 import { useSelector } from "react-redux";
 import Leaderboard from "./pages/Leaderboard";
 import Support from "./pages/Support";
-import { Box, LinearProgress } from "@mui/material";
 import LoadingPage from "./pages/LoadingPage";
 // import Rankboosting from "./pages/Rankboosting";
 

@@ -6,7 +6,6 @@ import axios from "axios";
 import "./Login.css";
 import IMAGES from "../img/image";
 import { AppUrl } from "../utils/appData";
-import { MailOutline, LockOutlined } from "@mui/icons-material";
 
 const LoginOld = () => {
   const navigate = useNavigate();

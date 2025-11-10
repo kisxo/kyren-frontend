@@ -1,9 +1,6 @@
 import React, { useEffect, useState } from "react";
 import AdminLayout from "./components/AdminLayout";
 import "./AdminDashboard.css";
-import PointOfSaleIcon from "@mui/icons-material/PointOfSale";
-import StayCurrentPortraitIcon from "@mui/icons-material/StayCurrentPortrait";
-import MonetizationOnIcon from "@mui/icons-material/MonetizationOn";
 import { useNavigate } from "react-router";
 import axios from "axios";
 import { message } from "antd";

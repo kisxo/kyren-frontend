@@ -4,7 +4,7 @@ import { AppUrl } from "../utils/appData";
 import { useEffect, useState } from "react";
 import { message } from "antd";
 import "./Leaderboard.css";
-import { KeyboardDoubleArrowRight, ArrowBack } from "@mui/icons-material";
+// import { KeyboardDoubleArrowRight, ArrowBack } from "@mui/icons-material";
 import { Link } from "react-router";
 
 const Leaderboard = () => {
@@ -41,7 +41,7 @@ const Leaderboard = () => {
         <Layout>
             <div className="leaderboard">
                 <Link to={"/"} className="mb-4 d-block text-light">
-                    <ArrowBack /> Back
+                    {/* <ArrowBack /> Back */}
                 </Link>
                 <div className="month-tab">
                     <div

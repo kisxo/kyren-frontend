@@ -7,7 +7,6 @@ import Layout from "../components/Layout/Layout.jsx";
 import HeroSection from "../components/Home/HeroSection.jsx";
 import axios from "axios";
 import Games from "../components/Games.jsx";
-import CancelIcon from "@mui/icons-material/Cancel";
 import getUserData from "../utils/userDataService.js";
 // import "./Home.css";
 import { AppUrl } from "../utils/appData.js";

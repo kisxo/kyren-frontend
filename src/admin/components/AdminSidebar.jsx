@@ -1,15 +1,6 @@
 import React from "react";
-import HomeIcon from "@mui/icons-material/Home";
-import GroupIcon from "@mui/icons-material/Group";
-import PaymentIcon from "@mui/icons-material/Payment";
-import ReceiptIcon from "@mui/icons-material/Receipt";
-import HelpIcon from "@mui/icons-material/Help";
-import InventoryIcon from "@mui/icons-material/Inventory";
-import DiscountIcon from "@mui/icons-material/Discount";
-import NotificationsActiveIcon from "@mui/icons-material/NotificationsActive";
 import { Link } from "react-router";
 import "./AdminSidebar.css";
-import { ContactEmergency } from "@mui/icons-material";
 
 const AdminSidebar = () => {
   return (

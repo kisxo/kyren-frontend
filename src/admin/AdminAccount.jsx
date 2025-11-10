@@ -1,9 +1,6 @@
 import React, { useEffect, useState } from "react";
 import AdminLayout from "./components/AdminLayout";
 import { message } from "antd";
-import SearchIcon from "@mui/icons-material/Search";
-import EditIcon from "@mui/icons-material/Edit";
-import DeleteIcon from "@mui/icons-material/Delete";
 import axios from "axios";
 import { useNavigate } from "react-router";
 import "./AdminUsers.css";

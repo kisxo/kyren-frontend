@@ -6,20 +6,13 @@ import Backdrop from "./Backdrop.jsx";
 import { useDispatch, useSelector } from "react-redux";
 import { setUser } from "../../redux/features/userSlice.js";
 import axios from "axios";
-import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import Tippy from "@tippyjs/react";
 import LogoutTippy from "./LogoutTippy.jsx";
 import "tippy.js/dist/tippy.css";
 import "tippy.js/themes/light.css";
-import SearchIcon from "@mui/icons-material/Search";
-import LocalMallIcon from "@mui/icons-material/LocalMall";
-import PersonIcon from "@mui/icons-material/Person";
-import MenuIcon from "@mui/icons-material/Menu";
-import AccountBalanceWalletIcon from "@mui/icons-material/AccountBalanceWallet";
 import SearchContainer from "../SearchContainer.jsx";
 import IMAGES from "../../img/image.js";
 import getUserData from "../../utils/userDataService.js";
-import { LockOpen, ArrowRight } from "@mui/icons-material";
 
 const Header = () => {
   const { user } = useSelector((state) => state.user);

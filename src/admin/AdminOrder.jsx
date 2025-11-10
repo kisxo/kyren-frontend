@@ -1,20 +1,11 @@
 import React, { useEffect, useState } from "react";
 import AdminLayout from "./components/AdminLayout";
 import { message } from "antd";
-import SearchIcon from "@mui/icons-material/Search";
-import DoneIcon from "@mui/icons-material/Done";
-import CloseIcon from "@mui/icons-material/Close";
-import EditIcon from "@mui/icons-material/Edit";
-import DeleteIcon from "@mui/icons-material/Delete";
 import axios from "axios";
 import "./AdminUsers.css";
 import IMAGES from "../img/image";
 import { Link, useNavigate, useParams } from "react-router";
-import PictureAsPdfIcon from "@mui/icons-material/PictureAsPdf";
-import FingerprintIcon from "@mui/icons-material/Fingerprint";
-import BadgeIcon from "@mui/icons-material/Badge";
-import NoAccountsIcon from "@mui/icons-material/NoAccounts";
-import RemoveRedEyeIcon from "@mui/icons-material/RemoveRedEye";
+// import RemoveRedEyeIcon from "@mui/icons-material/RemoveRedEye";
 
 const AdminUsers = () => {
   const navigate = useNavigate();

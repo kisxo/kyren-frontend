@@ -4,7 +4,6 @@ import { useNavigate, useParams } from "react-router";
 import "./AdminViewOrder.css";
 import axios from "axios";
 import { message } from "antd";
-import EditIcon from "@mui/icons-material/Edit";
 
 const AdminViewOrder = () => {
   const params = useParams();

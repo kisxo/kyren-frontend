@@ -2,8 +2,6 @@ import React, { useEffect, useRef, useState } from "react";
 import IMAGES from "../../img/image";
 import "./HeroSection.css";
 import Slider from "react-slick";
-import ArrowBackIosNewSharpIcon from "@mui/icons-material/ArrowBackIosNewSharp";
-import ArrowForwardIosSharpIcon from "@mui/icons-material/ArrowForwardIosSharp";
 
 const HeroSection = () => {
   const arrowRef = useRef();

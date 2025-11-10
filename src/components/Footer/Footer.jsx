@@ -1,13 +1,7 @@
 import React from "react";
 import { Link, useLocation, useNavigate } from "react-router";
-import EmailIcon from "@mui/icons-material/Email";
-import InstagramIcon from "@mui/icons-material/Instagram";
-import FacebookIcon from "@mui/icons-material/Facebook";
-import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import { useSelector } from "react-redux";
-import FavoriteIcon from "@mui/icons-material/Favorite";
 import "../Footer/Footer.css";
-import { Email, Facebook, Phone, Twitter, YouTube } from "@mui/icons-material";
 
 const Footer = () => {
     return (
@@ -16,19 +10,19 @@ const Footer = () => {
                 <div class="container-top">
                     <section class="footer-icons">
                         <a href="">
-                            <Facebook />
+                            {/* <Facebook /> */}
                         </a>
                         <a href="">
-                            <YouTube />
+                            {/* <YouTube /> */}
                         </a>
                         <a href="">
-                            <InstagramIcon />
+                            {/* <InstagramIcon /> */}
                         </a>
                         <a href="">
-                            <WhatsAppIcon />
+                            {/* <WhatsAppIcon /> */}
                         </a>
                         <a href="">
-                            <Email />
+                            {/* <Email /> */}
                         </a>
                     </section>
 

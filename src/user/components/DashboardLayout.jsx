@@ -1,6 +1,5 @@
 import React from "react";
 import { Link, useLocation, useNavigate } from "react-router";
-import LogoutIcon from "@mui/icons-material/Logout";
 import getUserData from "../../utils/userDataService";
 import { useDispatch } from "react-redux";
 import { setUser } from "../../redux/features/userSlice";
