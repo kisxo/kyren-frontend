@@ -56,7 +56,7 @@ const Login = () => {
           <input type="password" placeholder="Password" onChange={handleChange} value={form?.password} name="password"/>
         </div>
 
-        <button type="submit" className="bg-blue-600 text-white rounded-md text-xs p-2">Login</button>
+        <button type="submit" className="bg-blue-600 text-white rounded-md text-xs p-3">Login</button>
 
         
         <div className="quick-actions">
