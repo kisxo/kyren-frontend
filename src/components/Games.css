@@ -157,7 +157,6 @@
   font-size: .8rem;
   font-weight: bold;
   background-color: #eee;
-  border: 1px solid rgba(3, 163, 255, 0.169);
   padding: .6rem 1.5rem;
   border-radius: 2rem;
   white-space: nowrap;
@@ -165,8 +164,7 @@
 }
 
 .category-tab-selector.active{
-  background-color: var(--t);
-  border: none;
+  background-color: #464bd8;
   color: white;
 }
 
