@@ -81,12 +81,12 @@ const BottomNavBar = () => {
                 <span>Orders</span>
             </Link>
             {user ? (
-                <Link className="flex flex-col items-center">
+                <Link onClick={handleLogout} className="flex flex-col items-center">
                     <MdLogout className="size-6" />
                     <span>Logout</span>
                 </Link>
             ) : (
-                <Link className="flex flex-col items-center">
+                <Link to={"/login"} className="flex flex-col items-center">
                     <MdLogin className="size-6" />
                     <span>Login</span>
                 </Link>
