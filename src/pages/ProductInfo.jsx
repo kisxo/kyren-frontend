@@ -492,7 +492,7 @@ const ProductInfo = (props) => {
                     product?.gameName === "8996566" ||
                     product?.gameName === "10874415" ? (
                         <>
-                            <div className="user-info-input">
+                            <div className="user-info-input bg-neutral-50">
                               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><line x1="152" y1="112" x2="192" y2="112" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><line x1="152" y1="144" x2="192" y2="144" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><rect x="32" y="48" width="192" height="160" rx="8" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><circle cx="96" cy="120" r="24" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><path d="M64,168c3.55-13.8,17.09-24,32-24s28.46,10.19,32,24" fill="none"  stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/></svg>
                               <input
                                   type="text"
@@ -502,7 +502,7 @@ const ProductInfo = (props) => {
                                   value={userId}
                               />
                             </div>
-                            <div className="user-info-input">
+                            <div className="user-info-input bg-neutral-50">
                               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><circle cx="128" cy="128" r="96" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><path d="M168,128c0,64-40,96-40,96s-40-32-40-96,40-96,40-96S168,64,168,128Z" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><line x1="37.46" y1="96" x2="218.54" y2="96" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><line x1="37.46" y1="160" x2="218.54" y2="160" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/></svg>
                               <input
                                   type="text"
@@ -514,7 +514,7 @@ const ProductInfo = (props) => {
                             </div>
 
                             {playerCheck ?(
-                              <div className="verified-info">
+                              <div className="verified-info bg-neutral-100">
                                 <div className="label">Username:</div>
                                 <div className="verfied-username"> {playerCheck} </div>
                                 <button onClick={handleCheckPlayer}>
@@ -964,7 +964,7 @@ const ProductInfo = (props) => {
             {/* ================================= FIELDS  */}
             </div>
 
-            <div class="modal fade mlbb-help-modal" id="IdHelpModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            {/* <div class="modal fade mlbb-help-modal" id="IdHelpModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -975,7 +975,7 @@ const ProductInfo = (props) => {
                     <img src={mlbbHelpImage} alt="" />
                 </div>
             </div>
-            </div>
+            </div> */}
 
         </Layout>
     );

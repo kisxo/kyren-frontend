@@ -693,7 +693,6 @@
   display: flex;
   justify-content: center;
   gap: .5rem;
-  background-color: var(--light);
   border-radius: 1.4rem;
   align-items: center;
 
@@ -754,7 +753,6 @@
   gap: 1rem;
   justify-content: space-between;
   align-items: center;
-  background-color: var(--light);
   font-weight: 600;
   border-radius: 1.4rem;
   font-size: .8rem;
@@ -773,7 +771,7 @@
     border-radius: 0 1.2rem 1.2rem 0;
     padding: 1rem 1.5rem;
     font-weight: bold;
-    color: var(--light);
+    color: white;
     border: none;
     outline: none;
     background-color: #0062ff;
@@ -828,7 +826,7 @@
 
 .tab-container .tab-active{
   color: #fff;
-  background-color: var(--t);
+  background-color: #464bd8;
   border: 1px solid var(--secondary-200);
 
   p{
