@@ -4,6 +4,13 @@ import { useDispatch, useSelector } from "react-redux";
 import { message } from "antd";
 
 import { GoHomeFill } from "react-icons/go";
+import { MdWorkspacePremium } from "react-icons/md";
+import { IoPersonSharp } from "react-icons/io5";
+import { MdFormatListBulleted } from "react-icons/md";
+import { MdLogin } from "react-icons/md";
+import { MdLogout } from "react-icons/md";
+
+import { Link } from "react-router";
 
 const BottomNavBar = () => {
     const { user } = useSelector((state) => state.user);
@@ -56,16 +63,34 @@ const BottomNavBar = () => {
     ScrollToTop();
 
     return (
-        <div className="fixed bottom-0 w-full bg-amber-400 p-2">
-            <div><GoHomeFill className="size-10"/></div>
-            {/* <WorkspacePremium /> */}
-            {/* <Person /> */}
-            {/* <FormatListBulletedIcon /> */}
-            {/* {user ? (
-                <Logout />
+        <div className="fixed bottom-0 w-full bg-neutral-950/60 backdrop-blur-xs text-white/60 p-2 grid grid-cols-5 gap-6 text-xs">
+            <Link to={"/"} className="flex flex-col items-center">
+                <GoHomeFill className="size-6" />
+                <span>Home</span>
+            </Link>
+            <Link to={"/leaderboard"} className="flex flex-col items-center">
+                <MdWorkspacePremium className="size-6" />
+                <span>Leaderboard</span>
+            </Link>
+            <Link to={"/user-dashboard"} className="flex flex-col items-center">
+                <IoPersonSharp className="size-6" />
+                <span>Profile</span>
+            </Link>
+            <Link to={"/orders"} className="flex flex-col items-center">
+                <MdFormatListBulleted className="size-6" />
+                <span>Orders</span>
+            </Link>
+            {user ? (
+                <Link className="flex flex-col items-center">
+                    <MdLogout className="size-6" />
+                    <span>Logout</span>
+                </Link>
             ) : (
-               <Login />
-            )} */}
+                <Link className="flex flex-col items-center">
+                    <MdLogin className="size-6" />
+                    <span>Login</span>
+                </Link>
+            )}
         </div>
     );
 };

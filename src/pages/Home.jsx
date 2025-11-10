@@ -69,7 +69,6 @@ const Home = (props) => {
       {/* <HeroSection /> */}
       <QuickActions />
       <Games productsList={props.productsList} title={"Popular Games Top-Up"} />
-      hello
     </Layout>
   );
 };

@@ -62,7 +62,7 @@ const Layout = ({ children }) => {
     ScrollToTop();
 
     return (
-        <div className="h-screen flex flex-col bg-black">
+        <div className="h-screen flex flex-col">
             <Header/>
                 <div className="grow">{children}</div>
             <Footer />
