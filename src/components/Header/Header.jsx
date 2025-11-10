@@ -11,7 +11,6 @@ import LogoutTippy from "./LogoutTippy.jsx";
 import "tippy.js/dist/tippy.css";
 import "tippy.js/themes/light.css";
 import SearchContainer from "../SearchContainer.jsx";
-import IMAGES from "../../img/image.js";
 import getUserData from "../../utils/userDataService.js";
 import logo from "./../../assets/logo.png";
 

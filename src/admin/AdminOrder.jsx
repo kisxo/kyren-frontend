@@ -3,7 +3,7 @@ import AdminLayout from "./components/AdminLayout";
 import { message } from "antd";
 import axios from "axios";
 import "./AdminUsers.css";
-import IMAGES from "../img/image";
+// import IMAGES from "../img/image";
 import { Link, useNavigate, useParams } from "react-router";
 // import RemoveRedEyeIcon from "@mui/icons-material/RemoveRedEye";
 

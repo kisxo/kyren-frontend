@@ -3,7 +3,6 @@ import { Link, useNavigate } from "react-router";
 import { useSelector, useDispatch } from "react-redux";
 import "./SideMenu.css";
 import { message } from "antd";
-import IMAGES from "../../img/image";
 import { clearUser } from "../../redux/features/userSlice";
 
 const SideMenu = ({ sideMenu, setSideMenu }) => {

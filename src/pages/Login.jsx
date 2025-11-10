@@ -4,7 +4,6 @@ import { Link, useNavigate } from "react-router";
 import { message } from "antd";
 import axios from "axios";
 import "./Login.css";
-import IMAGES from "../img/image";
 import { AppUrl } from "../utils/appData";
 
 const LoginOld = () => {

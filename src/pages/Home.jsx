@@ -64,9 +64,17 @@ const Home = (props) => {
     localStorage.setItem("giveaway", "false");
   };
 
+  const banners = [
+  "https://wurustore.in/media/banner/banner-1.jpeg",
+  "https://wurustore.in/media/banner/banner-2.jpeg",
+  "https://wurustore.in/media/banner/banner-3.jpeg",
+  "https://wurustore.in/media/banner/banner-4.jpeg",
+  "https://wurustore.in/media/banner/banner-5.jpeg"
+];
+
   return (
     <Layout>
-      <HeroSection />
+      <HeroSection images={banners}/>
       <QuickActions />
       <Games productsList={props.productsList} title={"Popular Games Top-Up"} />
     </Layout>
