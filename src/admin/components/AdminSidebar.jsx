@@ -1,58 +1,37 @@
 import React from "react";
 import { Link } from "react-router";
-import "./AdminSidebar.css";
+// import "./AdminSidebar.css";
+
+import {
+    LayoutDashboard,
+    ShoppingBag,
+    Package,
+    Users,
+    CreditCard,
+    Wallet,
+} from "lucide-react";
+
+const navlist = [
+    { link: "/admin-dashboard", label: "Dashboard", icon: LayoutDashboard },
+    { link: "/admin-orders", label: "Orders", icon: ShoppingBag },
+    { link: "/admin-products", label: "Products", icon: Package },
+    { link: "/admin-users", label: "Users", icon: Users },
+    { link: "/admin-payments", label: "Payments", icon: CreditCard },
+    { link: "/admin-accounts", label: "Accounts", icon: Wallet },
+];
 
 const AdminSidebar = () => {
-  return (
-    <div className="admin-sidebar-container">
-      <span>
-        <small>MAIN</small>
-      </span>
-      <ul>
-        <li>
-          <Link to="/admin-dashboard">
-            {/* <HomeIcon className="me-2 icon" /> */}
-            Dashboard
-          </Link>
-        </li>
-      </ul>
-      <span>
-        <small>LISTS</small>
-      </span>
-      <ul>
-        <li>
-          <Link to="/admin-orders">
-            {/* <ReceiptIcon className="me-2 icon" /> */}
-            Orders
-          </Link>
-        </li>
-        <li>
-          <Link to="/admin-products">
-            {/* <InventoryIcon className="me-2 icon" /> */}
-            Products
-          </Link>
-        </li>
-        <li>
-          <Link to="/admin-users">
-            {/* <GroupIcon className="me-2 icon" /> */}
-            Customers
-          </Link>
-        </li>
-        <li>
-          <Link to="/admin-payments">
-            {/* <PaymentIcon className="me-2 icon" /> */}
-            Payments
-          </Link>
-        </li>
-        <li>
-          <Link to="/admin-accounts">
-            {/* <ContactEmergency className="me-2 icon" /> */}
-            Accounts
-          </Link>
-        </li>
-      </ul>
-    </div>
-  );
+    return (
+        <div className="space-y-6 text-sm">
+            {navlist.map((nav, i) => (
+                <Link to={nav.link} key={i} className="flex gap-2">
+                    <nav.icon className="h-5 w-5" />
+                    <span>{nav.label}</span>
+                </Link>
+            ))}
+        </div>
+    );
+
 };
 
 export default AdminSidebar;

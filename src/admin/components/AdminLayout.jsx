@@ -30,26 +30,18 @@ const AdminLayout = ({ children }) => {
               <RxHamburgerMenu onClick={toggleSidebar} className="size-8"/>
            </div>
 
-            <div className="admin-body">
-                <div className="admin-sidebar hidden lg:block">
+            {sidebarState && (
+                <div className="lg:hidden absolute bg-neutral-50/40 backdrop-blur-sm bg--500 w-full p-4">
                     <AdminSidebar />
                 </div>
+            )}
 
-                {sidebarState && (
-                    <div className="admin-sidebar lg:hidden">
-                        <AdminSidebar />
-                    </div>
-                )}
-
-                <div className="admin-body-content">{children}</div>
-            </div>
-
-            <footer>
-                <div className="admin-footer">
-                    <span>ADMIN</span>
-                    {/* <span>~aashirdigital</span> */}
+            <div className="flex h-screen">
+                <div className="hidden lg:block w-50 p-4 border">
+                    <AdminSidebar />
                 </div>
-            </footer>
+                <div className="">{children}</div>
+            </div>
         </div>
     );
 };
