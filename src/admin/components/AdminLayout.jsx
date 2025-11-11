@@ -5,7 +5,7 @@ import { useSelector } from "react-redux";
 import { useNavigate } from "react-router";
 import { RxHamburgerMenu } from "react-icons/rx";
 
-const AdminLayout = ({ children }) => {
+const AdminLayout = (props) => {
     const { user } = useSelector((state) => state.user);
     const navigate = useNavigate();
     const [sidebarState, setSidebarState] = useState(false);
@@ -19,16 +19,18 @@ const AdminLayout = ({ children }) => {
         }
     }, [user]);
 
-    function toggleSidebar (){setSidebarState(!sidebarState)}
+    function toggleSidebar() {
+        setSidebarState(!sidebarState);
+    }
 
     return (
         <div className="admin-layout-container bg-neutral-50">
-           <div className="flex justify-between p-4 items-center bg-black text-white">
+            <div className="flex justify-between p-4 items-center bg-black text-white">
                 <span>
-                Hello! <b>ADMIN</b>
-              </span>
-              <RxHamburgerMenu onClick={toggleSidebar} className="size-8"/>
-           </div>
+                    Hello! <b>ADMIN</b>
+                </span>
+                <RxHamburgerMenu onClick={toggleSidebar} className="size-8" />
+            </div>
 
             {sidebarState && (
                 <div className="lg:hidden absolute bg-neutral-50/40 backdrop-blur-sm bg--500 w-full p-4">
@@ -40,7 +42,13 @@ const AdminLayout = ({ children }) => {
                 <div className="hidden lg:block w-50 p-4 border">
                     <AdminSidebar />
                 </div>
-                <div className="">{children}</div>
+
+                <div className="p-4 w-full">
+                    <h1 className="text-3xl font-semibold w-full mb-8">
+                            {props.title}
+                    </h1>
+                    <div>{props.children}</div>
+                </div>
             </div>
         </div>
     );
