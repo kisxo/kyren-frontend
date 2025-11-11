@@ -13,6 +13,12 @@ import { AppUrl } from "../utils/appData.js";
 import NotificationSlider from "../components/ NotificationSlider.jsx";
 import QuickActions from "../components/Home/QuickActions.jsx";
 
+import banner1 from "../img/home/banner1.jpeg";
+import banner2 from "../img/home/banner2.jpeg";
+import banner3 from "../img/home/banner3.jpeg";
+import banner4 from "../img/home/banner4.jpeg";
+import banner5 from "../img/home/banner5.jpeg";
+
 const Home = (props) => {
   const params = useParams();
   const navigate = useNavigate();
@@ -65,11 +71,7 @@ const Home = (props) => {
   };
 
   const banners = [
-  "https://wurustore.in/media/banner/banner-1.jpeg",
-  "https://wurustore.in/media/banner/banner-2.jpeg",
-  "https://wurustore.in/media/banner/banner-3.jpeg",
-  "https://wurustore.in/media/banner/banner-4.jpeg",
-  "https://wurustore.in/media/banner/banner-5.jpeg"
+    banner1,banner2, banner3, banner4, banner5
 ];
 
   return (

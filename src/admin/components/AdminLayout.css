@@ -1,6 +1,6 @@
 .admin-layout-container {
-  background-color: var(--s);
-  color: #fff;
+  /* background-color: var(--s); */
+  /* color: #fff; */
 }
 /* ADMIN HEADER  */
 .admin-header-main {
@@ -12,7 +12,7 @@
   padding: 0 30px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
   background-color: var(--s);
-  color: #fff;
+  /* color: #fff; */
   position: relative;
 }
 .admin-tools {
@@ -53,7 +53,7 @@
   z-index: 9999;
   padding: 20px;
   width: 100%;
-  background-color: #fff;
+  /* background-color: #fff; */
   color: #000;
   transition: 0.3s all ease;
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);

@@ -93,7 +93,7 @@ const AdminProduct = () => {
         <div className="table-container">
           <div className="tools">
             <div className="form-fields">
-              <SearchIcon className="text-dark me-2" />
+              {/* <SearchIcon className="text-dark me-2" /> */}
               <input
                 className="mb-4"
                 type="search"
@@ -131,18 +131,18 @@ const AdminProduct = () => {
                     </td>
                     <td>
                       <div className="d-flex gap-2">
-                        <EditIcon
+                        {/* <EditIcon
                           onClick={() =>
                             navigate(`/admin-edit-product/${product?._id}`)
                           }
-                        />
-                        <DeleteIcon
+                        /> */}
+                        {/* <DeleteIcon
                           style={{ cursor: "pointer" }}
                           onClick={() =>
                             handleDeleteProduct(product?._id, product?.image)
                           }
                           className="text-danger"
-                        />
+                        /> */}
                       </div>
                     </td>
                   </tr>
