@@ -451,7 +451,7 @@ const ProductInfo = (props) => {
               <div className="game-box mb-5">
                 <div className="game-banner">
                   <div className="info">
-                    <img src={`https://wurustore.in/${product?.image}`}/>
+                    <img src={AppUrl + `/${product?.image}`} className=""/>
                     <div className="name">{product.name}</div>
                   </div>
                   <div className="instructions">
