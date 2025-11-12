@@ -24,7 +24,7 @@ const AdminLayout = (props) => {
     }
 
     return (
-        <div className="admin-layout-container bg-neutral-50 text-black">
+        <div className="admin-layout-container bg-white" data-theme="corporate">
             <div className="flex justify-between p-4 items-center bg-black text-white">
                 <span>
                     Hello! <b>ADMIN</b>

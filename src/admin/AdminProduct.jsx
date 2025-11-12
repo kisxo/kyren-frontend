@@ -85,15 +85,38 @@ const AdminProduct = () => {
         filteredUsers && filteredUsers ? filteredUsers : products;
     return (
         <AdminLayout title="Products">
-            <div className="admin-users-container">
+            <div className="">
+              <div className="space-x-3">
                 <button
                     className="btn btn-soft"
                     onClick={() => navigate("/admin-add-product")}
                 >
                     Add New
                 </button>
-                <hr />
-                <div className="table-container">
+                <label class="input">
+                    <svg
+                        class="h-[1em] opacity-50"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                    >
+                        <g
+                            stroke-linejoin="round"
+                            stroke-linecap="round"
+                            stroke-width="2.5"
+                            fill="none"
+                            stroke="currentColor"
+                        >
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <path d="m21 21-4.3-4.3"></path>
+                        </g>
+                    </svg>
+                    <input type="search" class="grow" placeholder="Search" />
+                    <kbd class="kbd kbd-sm">⌘</kbd>
+                    <kbd class="kbd kbd-sm">K</kbd>
+                </label>
+              </div>
+                
+                <div className="">
                     <div className="tools">
                         <div className="form-fields">
                             {/* <SearchIcon className="text-dark me-2" /> */}
