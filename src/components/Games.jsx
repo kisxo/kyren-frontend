@@ -228,7 +228,7 @@ const ProductCard = ({props}) => {
   const navigate = useNavigate();
   return (
     <div className="product-card" onClick={() => navigate(`/product/${props?.name}`)}>
-      <img className="icon" src={`https://wurustore.in/${props?.image}`} alt={props?.name} />
+      <img className="icon" src={AppUrl + `/${props?.image}`} alt={props?.name} />
       <div className="product-name">{props?.name}</div>
       {props?.tag && (
         <span className="product-tag">{props?.tag}</span>

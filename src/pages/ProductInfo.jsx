@@ -245,7 +245,7 @@ const ProductInfo = (props) => {
                 customer_name: user?.fname,
                 customer_email: user?.email,
                 customer_mobile: user?.mobile,
-                callback_url: `https://wurustore.in/api/payment/check-api-upi-order?orderId=${orderId}`,
+                callback_url: AppUrl + `/api/payment/check-api-upi-order?orderId=${orderId}`,
                 txn_note:
                     userId +
                     "@" +
@@ -340,7 +340,7 @@ const ProductInfo = (props) => {
                 customer_name: user?.fname,
                 customer_email: user?.email,
                 customer_mobile: user?.mobile,
-                callback_url: `https://wurustore.in/api/moogold/check-moogold-upi-order?orderId=${orderId}`,
+                callback_url: AppUrl + `/api/moogold/check-moogold-upi-order?orderId=${orderId}`,
                 txn_note:
                     userId +
                     "@" +

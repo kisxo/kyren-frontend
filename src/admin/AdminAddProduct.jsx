@@ -5,7 +5,7 @@ import { useNavigate } from "react-router";
 import axios from "axios";
 import "./AdminAddProduct.css";
 import { message } from "antd";
-import { AppUrl } from "../utils/appData";
+import {AppUrl} from "../utils/appData.js"
 
 const AdminAddProduct = () => {
   const navigate = useNavigate();
@@ -19,7 +19,9 @@ const AdminAddProduct = () => {
 
   const [form, setForm] = useState({
     name: "",
+    tDesc: "",
     desc: "",
+    tag: "",
     category: "",
     api: "",
     apiName: "",
@@ -29,7 +31,7 @@ const AdminAddProduct = () => {
     images: [],
   });
   const [cost, setCost] = useState([
-    { id: "", amount: "", price: "", pimg: "", resPrice: "" },
+    { id: "", amount: "", price: "", pimg: "", resPrice: "" , groupName: "any"},
   ]);
 
   const handleAddCostField = (index) => {
@@ -85,12 +87,14 @@ const AdminAddProduct = () => {
   const handleAddProduct = async () => {
     const formData = new FormData();
     formData.append("name", form?.name);
+    formData.append("tDesc", form?.tDesc); // Add this line
     formData.append("api", form?.api);
     formData.append("apiName", form?.apiName);
     formData.append("gameName", form?.gameName);
     formData.append("region", form?.region);
     formData.append("stock", form?.stock);
     formData.append("desc", form?.desc);
+    formData.append("tag", form?.tag);
     formData.append("category", form?.category);
     formData.append("cost", JSON.stringify(cost));
     formData.append("image", selectedFile);
@@ -98,7 +102,7 @@ const AdminAddProduct = () => {
     setLoading(true);
 
     try {
-      const res = await axios.post(AppUrl +"/api/product/add-product", formData, {
+      const res = await axios.post(AppUrl + "/api/product/add-product", formData, {
         headers: {
           "Content-Type": "multipart/form-data",
           Authorization: "Bearer " + localStorage.getItem("token"),
@@ -122,7 +126,7 @@ const AdminAddProduct = () => {
   const getMobileLegendGame = async () => {
     try {
       const res = await axios.post(
-        AppUrl +"/api/product/get-mobile-legend",
+        AppUrl + "/api/product/get-mobile-legend",
         { region: form?.region },
         {
           headers: {
@@ -148,7 +152,7 @@ const AdminAddProduct = () => {
 
   const fetchYokcashServices = async () => {
     try {
-      const res = await axios.post(AppUrl +"/api/yokcash/get-yokcash", {
+      const res = await axios.post(AppUrl + "/api/yokcash/get-yokcash", {
         gameName: form?.gameName,
       });
       if (res.data.success) {
@@ -163,7 +167,7 @@ const AdminAddProduct = () => {
 
   const fetchMoogoldServices = async () => {
     try {
-      const res = await axios.post(AppUrl +"/api/moogold/moogold-product", {
+      const res = await axios.post(AppUrl + "/api/moogold/moogold-product", {
         product_id: form?.gameName,
       });
       if (res.data.success) {
@@ -178,7 +182,7 @@ const AdminAddProduct = () => {
 
   const fetchMoogoldServers = async () => {
     try {
-      const res = await axios.post(AppUrl +"/api/moogold/moogold-servers", {
+      const res = await axios.post(AppUrl + "/api/moogold/moogold-servers", {
         product_id: form?.gameName,
       });
       if (res.data.success) {
@@ -231,6 +235,27 @@ const AdminAddProduct = () => {
               placeholder="Enter name"
             />
           </div>
+          
+          <div className="form-fields mb-3">
+              <input
+                className="w-100"
+                name="tag"
+                onChange={handleChange}
+                value={form?.tag}
+                type="text"
+                placeholder="Enter Tag"
+              />
+            </div>
+            <div className="form-fields mb-3">
+              <input
+                className="w-100"
+                name="category"
+                onChange={handleChange}
+                value={form?.category}
+                type="text"
+                placeholder="Enter Category"
+              />
+            </div>
           <div className="form-fields mb-3">
             <textarea
               style={{ border: "1px solid #000" }}
@@ -265,8 +290,8 @@ const AdminAddProduct = () => {
                 className="w-100"
               >
                 <option value="">Select API</option>
-                <option value="smileOne">Smile One Api</option>
-                {/* <option value="moogold">Moogold</option> */}
+                {/* <option value="smileOne">Smile One Api</option> */}
+                <option value="moogold">Moogold</option>
               </select>
             </div>
           )}
@@ -283,7 +308,17 @@ const AdminAddProduct = () => {
                 <option value="9477186">Zenless Zone Zero</option>
                 <option value="4427071">Clash of clans</option>
                 <option value="6963">PUBG Global</option>
+
+                {/* mlbb all regions*/}
                 <option value="15145">Mobile Legends</option>
+                <option value="2362359">Mobile Legends (Indonesia)</option>
+                <option value="4690648">Mobile Legends (Malaysia)</option>
+                <option value="5846232">Mobile Legends (Brazil)</option>
+                <option value="6637539">Mobile Legends (Russia)</option>
+                <option value="8957883">Mobile Legends (Philippines)</option>
+                <option value="8996566">Mobile Legends (Singapore)</option>
+                <option value="10874415">Mobile Legends (Turkey)</option>
+
                 <option value="4233885">Honkai Star Rails</option>
                 <option value="4427073">Brawl Star</option> PlayerTag
                 <option value="5177311">Honor of Kings</option> PlayerID
