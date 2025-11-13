@@ -176,7 +176,7 @@ const Games = (props) => {
     }, props);
 
     return (
-        <div className="m-4 p-4 bg-neutral-900 space-y-4 rounded-md shadow">
+        <div className="m-4 p-4 bg-neutral-900 space-y-4 rounded-md shadow" id="game-top-up">
             {/* <div className="flex gap-4 overflow-x-scroll text-nowrap">
         {category?.map((item, index) => {
           return (
