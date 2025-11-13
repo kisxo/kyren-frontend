@@ -64,7 +64,7 @@ const Layout = ({ children }) => {
     return (
         <div className="h-screen flex flex-col">
             <Header/>
-                <div className="grow">{children}</div>
+            <div className="grow">{children}</div>
             <Footer />
             <BottomNavBar/>
         </div>
