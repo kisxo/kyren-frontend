@@ -55,9 +55,9 @@ function App() {
         return () => clearTimeout(timer);
     }, []);
 
-    // if (loading) {
-    //   return <LoadingPage />;
-    // }
+    if (loading) {
+      return <LoadingPage />;
+    }
 
     return (
         <BrowserRouter>
