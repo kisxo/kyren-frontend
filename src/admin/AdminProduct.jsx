@@ -3,7 +3,7 @@ import AdminLayout from "./components/AdminLayout";
 import { message } from "antd";
 import axios from "axios";
 import { useNavigate } from "react-router";
-import "./AdminUsers.css";
+// import "./AdminUsers.css";
 import { AppUrl } from "../utils/appData";
 
 const AdminProduct = () => {
@@ -86,65 +86,59 @@ const AdminProduct = () => {
     return (
         <AdminLayout title="Products">
             <div className="">
-              <div className="space-x-3">
-                <button
-                    className="btn btn-soft"
-                    onClick={() => navigate("/admin-add-product")}
-                >
-                    Add New
-                </button>
-                <label class="input">
-                    <svg
-                        class="h-[1em] opacity-50"
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 24 24"
-                    >
-                        <g
-                            stroke-linejoin="round"
-                            stroke-linecap="round"
-                            stroke-width="2.5"
-                            fill="none"
-                            stroke="currentColor"
+                <div className="space-x-3 flex">
+                    <label class="input">
+                        <svg
+                            class="h-[1em] opacity-50"
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 24 24"
                         >
-                            <circle cx="11" cy="11" r="8"></circle>
-                            <path d="m21 21-4.3-4.3"></path>
-                        </g>
-                    </svg>
-                    <input type="search" class="grow" placeholder="Search" />
-                    <kbd class="kbd kbd-sm">⌘</kbd>
-                    <kbd class="kbd kbd-sm">K</kbd>
-                </label>
-              </div>
-                
-                <div className="">
-                    <div className="tools">
-                        <div className="form-fields">
-                            {/* <SearchIcon className="text-dark me-2" /> */}
-                            <input
-                                className="mb-4"
-                                type="search"
-                                name="search"
-                                placeholder="Search by name"
-                                value={searchQuery}
-                                onChange={(e) => setSearchQuery(e.target.value)}
-                            />
-                        </div>
-                    </div>
-                    <table className="table user-table">
+                            <g
+                                stroke-linejoin="round"
+                                stroke-linecap="round"
+                                stroke-width="2.5"
+                                fill="none"
+                                stroke="currentColor"
+                            >
+                                <circle cx="11" cy="11" r="8"></circle>
+                                <path d="m21 21-4.3-4.3"></path>
+                            </g>
+                        </svg>
+                        <input
+                            type="search"
+                            name="search"
+                            placeholder="Search by name"
+                            value={searchQuery}
+                            onChange={(e) => setSearchQuery(e.target.value)}
+                        />
+                    </label>
+                    <button
+                        className="btn btn-soft"
+                        onClick={() => navigate("/admin-add-product")}
+                    >
+                        Add New
+                    </button>
+                </div>
+                <div class="overflow-x-auto">
+                    <table class="table">
                         <thead>
                             <tr>
                                 <th>Image</th>
                                 <th>Name</th>
                                 <th>Stock</th>
-                                <th>Action</th>
+                                <th>Actions</th>
                             </tr>
                         </thead>
                         <tbody>
                             {filterProduct?.map((product, index) => {
                                 return (
-                                    <tr key={index}>
+                                    <tr
+                                        key={index}
+                                        className="hover:bg-base-200"
+                                    >
                                         <td>
                                             <img
+                                                className="size-25 object-contain aspect-square"
                                                 src={
                                                     AppUrl +
                                                     `/${product?.image}`
@@ -158,28 +152,35 @@ const AdminProduct = () => {
                                         <td>
                                             <small>{product?.stock}</small>
                                         </td>
-                                        <td>
-                                            <div className="d-flex gap-2">
-                                                {/* <EditIcon
-                          onClick={() =>
-                            navigate(`/admin-edit-product/${product?._id}`)
-                          }
-                        /> */}
-                                                {/* <DeleteIcon
-                          style={{ cursor: "pointer" }}
-                          onClick={() =>
-                            handleDeleteProduct(product?._id, product?.image)
-                          }
-                          className="text-danger"
-                        /> */}
-                                            </div>
+                                        <td className="space-x-4">
+                                            <button
+                                                class="btn btn-success"
+                                                onClick={() => {
+                                                    navigate(
+                                                        `/admin-edit-product/${product?._id}`
+                                                    );
+                                                }}
+                                            >
+                                                Edit
+                                            </button>
+                                            <button
+                                                class="btn btn-error"
+                                                style={{ cursor: "pointer" }}
+                                                onClick={() =>
+                                                    handleDeleteProduct(
+                                                        product?._id,
+                                                        product?.image
+                                                    )
+                                                }
+                                            >
+                                                Delete
+                                            </button>
                                         </td>
                                     </tr>
                                 );
                             })}
                         </tbody>
                     </table>
-                    <div className="pagination"></div>
                 </div>
             </div>
         </AdminLayout>

@@ -223,14 +223,14 @@ function App() {
                         </ProtectedRoute>
                     }
                 />
-                {/* <Route
+                <Route
           path="/admin-edit-product/:id?"
           element={
             <ProtectedRoute>
               <AdminEditProduct />
             </ProtectedRoute>
           }
-        /> */}
+        />
                 {/* <Route
           path="/admin-edit-groups/:id?"
           element={
@@ -238,8 +238,8 @@ function App() {
               <AdminEditGroups/>
             </ProtectedRoute>
           }
-        /> */}
-                {/* <Route
+        />
+                <Route
           path="/admin-add-tab/:id?"
           element={
             <ProtectedRoute>

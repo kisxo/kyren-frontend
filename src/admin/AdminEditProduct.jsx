@@ -22,6 +22,7 @@ const AdminEditProduct = () => {
   const [form, setForm] = useState({
     name: "",
     desc: "",
+    tag: "",
     category: "",
     api: "",
     apiName: "",
@@ -31,7 +32,7 @@ const AdminEditProduct = () => {
     images: [],
   });
   const [cost, setCost] = useState([
-    { id: "", amount: "", price: "", pimg: "", resPrice: "" },
+    { id: "", amount: "", price: "", pimg: "", resPrice: "", groupName:"all", image:"", tabName:"all", tabImage:""},
   ]);
 
   const handleAddCostField = (index) => {
@@ -42,6 +43,10 @@ const AdminEditProduct = () => {
       price: "",
       pimg: "",
       resPrice: "",
+      groupName:"",
+      image:"",
+      tabName:"",
+      tabImage:"",
     });
     setCost(updatedCost);
   };
@@ -60,7 +65,11 @@ const AdminEditProduct = () => {
       name.startsWith("amount") ||
       name.startsWith("price") ||
       name.startsWith("pimg") ||
-      name.startsWith("resPrice")
+      name.startsWith("resPrice") ||
+      name.startsWith("groupName") ||
+      name.startsWith("image") ||
+      name.startsWith("tabName") ||
+      name.startsWith("tabImage")
     ) {
       const index = parseInt(name.split("-")[1]);
       const updatedCost = [...cost];
@@ -72,6 +81,14 @@ const AdminEditProduct = () => {
         ? "pimg"
         : name.startsWith("resPrice")
         ? "resPrice"
+        : name.startsWith("groupName")
+        ? "groupName"
+        : name.startsWith("image")
+        ? "image"
+        : name.startsWith("tabName")
+        ? "tabName"
+        : name.startsWith("tabImage")
+        ? "tabImage"
         : "id";
       updatedCost[index][property] = value;
       setCost(updatedCost);
@@ -94,6 +111,7 @@ const AdminEditProduct = () => {
     formData.append("region", form?.region);
     formData.append("stock", form?.stock);
     formData.append("desc", form?.desc);
+    formData.append("tag", form?.tag);
     formData.append("category", form?.category);
     formData.append("image", selectedFile);
     cost.forEach((costItem, index) => {
@@ -101,12 +119,29 @@ const AdminEditProduct = () => {
       formData.append(`cost[${index}][amount]`, costItem.amount);
       formData.append(`cost[${index}][price]`, costItem.price);
       formData.append(`cost[${index}][resPrice]`, costItem.resPrice);
+
+      if(costItem.groupName)
+      {
+        formData.append(`cost[${index}][groupName]`, costItem.groupName);
+      }
+      if(costItem.image)
+      {
+        formData.append(`cost[${index}][image]`, costItem.image);
+      }
+      if(costItem.groupName)
+      {
+        formData.append(`cost[${index}][tabName]`, costItem.tabName);
+      }
+      if(costItem.image)
+      {
+        formData.append(`cost[${index}][tabImage]`, costItem.tabImage);
+      }
     });
 
     setLoading(true);
 
     try {
-      const res = await axios.post(AppUrl +"/api/product/update-product", formData, {
+      const res = await axios.post(AppUrl + "/api/product/update-product", formData, {
         headers: {
           "Content-Type": "multipart/form-data",
           Authorization: "Bearer " + localStorage.getItem("token"),
@@ -129,7 +164,7 @@ const AdminEditProduct = () => {
 
   const getProduct = async () => {
     try {
-      const res = await axios.post(AppUrl +"/api/product/get-product", {
+      const res = await axios.post(AppUrl + "/api/product/get-product", {
         id: params.id,
       });
       if (res.data.success) {
@@ -150,8 +185,7 @@ const AdminEditProduct = () => {
 
   const getMobileLegendGame = async () => {
     try {
-      const res = await axios.post(
-        AppUrl +"/api/product/get-mobile-legend",
+      const res = await axios.post(AppUrl + "/api/product/get-mobile-legend",
         { region: form?.region },
         {
           headers: {
@@ -177,7 +211,7 @@ const AdminEditProduct = () => {
 
   const fetchYokcashServices = async () => {
     try {
-      const res = await axios.post(AppUrl +"/api/yokcash/get-yokcash", {
+      const res = await axios.post(AppUrl + "/api/yokcash/get-yokcash", {
         gameName: form?.gameName,
       });
       if (res.data.success) {
@@ -192,7 +226,7 @@ const AdminEditProduct = () => {
 
   const fetchMoogoldServices = async () => {
     try {
-      const res = await axios.post(AppUrl +"/api/moogold/moogold-product", {
+      const res = await axios.post(AppUrl + "/api/moogold/moogold-product", {
         product_id: form?.gameName,
       });
       if (res.data.success) {
@@ -207,7 +241,7 @@ const AdminEditProduct = () => {
 
   const fetchMoogoldServers = async () => {
     try {
-      const res = await axios.post(AppUrl +"/api/moogold/moogold-servers", {
+      const res = await axios.post(AppUrl + "/api/moogold/moogold-servers", {
         product_id: form?.gameName,
       });
       if (res.data.success) {
@@ -260,6 +294,27 @@ const AdminEditProduct = () => {
               placeholder="Enter name"
             />
           </div>
+           
+          <div className="form-fields mb-3">
+              <input
+                className="w-100"
+                name="tag"
+                onChange={handleChange}
+                value={form?.tag}
+                type="text"
+                placeholder="Enter Tag"
+              />
+            </div>
+            <div className="form-fields mb-3">
+              <input
+                className="w-100"
+                name="category"
+                onChange={handleChange}
+                value={form?.category}
+                type="text"
+                placeholder="Enter Category"
+              />
+            </div>
           <div className="form-fields mb-3">
             <textarea
               style={{ border: "1px solid #000" }}
@@ -294,8 +349,8 @@ const AdminEditProduct = () => {
                 className="w-100"
               >
                 <option value="">Select API</option>
-                <option value="smileOne">Smile One Api</option>
-                {/* <option value="moogold">Moogold</option> */}
+                {/* <option value="smileOne">Smile One Api</option> */}
+                <option value="moogold">Moogold</option>
               </select>
             </div>
           )}
@@ -312,7 +367,17 @@ const AdminEditProduct = () => {
                 <option value="9477186">Zenless Zone Zero</option>
                 <option value="4427071">Clash of clans</option>
                 <option value="6963">PUBG Global</option>
+
+                {/* mlbb all regions*/}
                 <option value="15145">Mobile Legends</option>
+                <option value="2362359">Mobile Legends (Indonesia)</option>
+                <option value="4690648">Mobile Legends (Malaysia)</option>
+                <option value="5846232">Mobile Legends (Brazil)</option>
+                <option value="6637539">Mobile Legends (Russia)</option>
+                <option value="8957883">Mobile Legends (Philippines)</option>
+                <option value="8996566">Mobile Legends (Singapore)</option>
+                <option value="10874415">Mobile Legends (Turkey)</option>
+
                 <option value="4233885">Honkai Star Rails</option>
                 <option value="4427073">Brawl Star</option>
                 <option value="5177311">Honor of Kings</option>
