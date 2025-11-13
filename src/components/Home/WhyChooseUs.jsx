@@ -8,7 +8,7 @@ const WhyChooseUs = () => {
     <div className="absolute bottom-0 right-1/4 w-[400px] h-[400px] bg-fuchsia-600/10 rounded-full blur-3xl"></div>
   </div>
 
-  <div className="relative z-10 max-w-7xl mx-auto px-6">
+  <div className="relative max-w-7xl mx-auto px-6">
     <div className="text-center mb-16">
       <h2 className="text-5xl md:text-6xl font-extrabold tracking-tight bg-linear-to-r from-white via-blue-400 to-fuchsia-400 bg-clip-text text-transparent drop-shadow-lg">
         Why Choose Us

@@ -1,12 +1,12 @@
 import React from "react";
 import { Link, useLocation, useNavigate } from "react-router";
 import { useSelector } from "react-redux";
-import "../Footer/Footer.css";
+// import "../Footer/Footer.css";
 
 const Footer = () => {
     return (
-        <div class="footer">
-            <footer class="text-center text-white">
+        <div class="p-4 pt-10 pb-20 text-xs text-center text-white/30 ">
+            <footer class="">
                 <div class="container-top">
                     <section class="footer-icons">
                         <a href="">
@@ -26,7 +26,7 @@ const Footer = () => {
                         </a>
                     </section>
 
-                    <section class="footer-links">
+                    <section class="flex justify-center gap-4">
                         <Link href="#!">Contact Us</Link>
                         <Link href="/terms-and-conditions">Terms & Conditions</Link>
                         <Link href="/privacy-policy">Privacy Policy</Link>
@@ -37,7 +37,7 @@ const Footer = () => {
 
                 <hr class="my-3" />
 
-                <div class="text-center footer-info">
+                <div class="mt-10">
                     © 2025
                     <a href=""> Kyren Official Store </a>
                 </div>
