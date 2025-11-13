@@ -63,7 +63,7 @@ const DashboardLayout = (props) => {
       </div>
 
       {/* Content area */}
-      <div className="flex-1 bg-neutral-950 p-6 border-t border-neutral-900 rounded-t-2xl">
+      <div className="flex-1 bg-neutral-950 border-t border-neutral-900">
         {props.children}
       </div>
     </div>
