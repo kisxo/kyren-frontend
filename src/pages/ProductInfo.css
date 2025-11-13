@@ -717,7 +717,6 @@
 
   select, select:focus, .select:active{
     font-weight: 600;
-    color: #fff;
     background-color: #ffffff00;
     border: none;
     outline: none;

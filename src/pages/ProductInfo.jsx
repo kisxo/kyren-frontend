@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Layout from "../components/Layout/Layout";
-import { useNavigate, useParams } from "react-router";
+import { Link, useNavigate, useParams } from "react-router";
 import { message } from "antd";
 import axios from "axios";
 import { useDispatch, useSelector } from "react-redux";
@@ -516,17 +516,17 @@ const ProductInfo = (props) => {
                         </div>
 
                         {product?.apiName === "smileOne" ||
-                    (product?.apiName === "moogold" &&
-                        product?.gameName === "15145") ||
-                    product?.gameName === "2362359" ||
-                    product?.gameName === "4690648" ||
-                    product?.gameName === "5846232" ||
-                    product?.gameName === "6637539" ||
-                    product?.gameName === "8957883" ||
-                    product?.gameName === "8996566" ||
-                    product?.gameName === "10874415" ?  (
+                        (product?.apiName === "moogold" &&
+                            product?.gameName === "15145") ||
+                        product?.gameName === "2362359" ||
+                        product?.gameName === "4690648" ||
+                        product?.gameName === "5846232" ||
+                        product?.gameName === "6637539" ||
+                        product?.gameName === "8957883" ||
+                        product?.gameName === "8996566" ||
+                        product?.gameName === "10874415" ? (
                             <>
-                                <div className="user-info-input bg-neutral-50">
+                                <div className="user-info-input bg-neutral-50 text-neutral-600">
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
                                         viewBox="0 0 256 256"
@@ -589,7 +589,7 @@ const ProductInfo = (props) => {
                                         value={userId}
                                     />
                                 </div>
-                                <div className="user-info-input bg-neutral-50">
+                                <div className="user-info-input bg-neutral-50 text-neutral-600">
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
                                         viewBox="0 0 256 256"
@@ -643,7 +643,7 @@ const ProductInfo = (props) => {
                                 </div>
 
                                 {playerCheck ? (
-                                    <div className="verified-info bg-neutral-100">
+                                    <div className="verified-info bg-neutral-100 text-neutral-600">
                                         <div className="label">Username:</div>
                                         <div className="verfied-username">
                                             {" "}
@@ -692,7 +692,7 @@ const ProductInfo = (props) => {
                               product?.gameName === "4233885" ||
                               product?.gameName === "9477186") ? (
                             <>
-                                <div className="user-info-input">
+                                <div className="user-info-input bg-neutral-100 text-neutral-600">
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
                                         viewBox="0 0 256 256"
@@ -756,7 +756,7 @@ const ProductInfo = (props) => {
                                         value={userId}
                                     />
                                 </div>
-                                <div className="user-info-input">
+                                <div className="user-info-input bg-neutral-100 text-neutral-600 py-3">
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
                                         viewBox="0 0 256 256"
@@ -824,7 +824,7 @@ const ProductInfo = (props) => {
                               product?.gameName === "6963" ||
                               product?.gameName === "4427073" ||
                               product?.gameName === "4427071") ? (
-                            <div className="user-info-input">
+                            <div className="user-info-input bg-neutral-100 text-neutral-600">
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
                                     viewBox="0 0 256 256"
@@ -888,7 +888,7 @@ const ProductInfo = (props) => {
                                 />
                             </div>
                         ) : (
-                            <div className="user-info-input">
+                            <div className="user-info-input bg-neutral-100 text-neutral-600">
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
                                     viewBox="0 0 256 256"
@@ -1303,7 +1303,7 @@ const ProductInfo = (props) => {
                                 )}
                             </div>
                         </div>
-                        
+
                         <div className="flex w-full">
                             {!user ? (
                                 <button
@@ -1363,7 +1363,8 @@ const ProductInfo = (props) => {
                                     )}
                                 </button>
                             ) : playerCheck === null ? (
-                                <a href="#verify-game-id"
+                                <a
+                                    href="#verify-game-id"
                                     className="btn btn-primary w-full"
                                 >
                                     Verify Game ID
@@ -1388,11 +1389,35 @@ const ProductInfo = (props) => {
                                 </button>
                             )}
                         </div>
+
+
+                                            <div className="mt-6 text-center text-xs text-neutral-500 dark:text-neutral-400">
+                        <p className="leading-relaxed">
+                            By proceeding with the payment, you agree to our{" "}
+                            <Link
+                                to="/terms-and-conditions"
+                                className="text-indigo-500 hover:text-fuchsia-500 transition-colors duration-300 underline-offset-2 hover:underline"
+                            >
+                                Terms & Conditions
+                            </Link>{" "}
+                            and{" "}
+                            <Link
+                                to="/privacy-policy"
+                                className="text-indigo-500 hover:text-fuchsia-500 transition-colors duration-300 underline-offset-2 hover:underline"
+                            >
+                                Privacy Policy
+                            </Link>
+                            .
+                        </p>
+                        <p className="mt-2 text-[11px] opacity-75">
+                            Please ensure your game ID and server details are
+                            correct before payment.
+                        </p>
+                    </div>
                     </div>
 
-
                     <div className="p-4 text-light bg-neutral-900 rounded-xl my-4">
-                            <span>{product?.desc}</span>
+                        <span>{product?.desc}</span>
                     </div>
 
                     {/* <div className="package-container">

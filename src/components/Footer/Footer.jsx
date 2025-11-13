@@ -27,11 +27,11 @@ const Footer = () => {
                     </section>
 
                     <section class="footer-links">
-                        <a href="#!">Contact Us</a>
-                        <a href="#!">Terms & Conditions</a>
-                        <a href="#!">Privacy Policy</a>
-                        <a href="#!">Refund Policy</a>
-                        <a href="#!">Copyright</a>
+                        <Link href="#!">Contact Us</Link>
+                        <Link href="/terms-and-conditions">Terms & Conditions</Link>
+                        <Link href="/privacy-policy">Privacy Policy</Link>
+                        <Link href="#!">Refund Policy</Link>
+                        <Link href="#!">Copyright</Link>
                     </section>
                 </div>
 

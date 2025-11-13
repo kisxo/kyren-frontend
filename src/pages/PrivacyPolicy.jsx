@@ -1,97 +1,138 @@
 import React from "react";
 import Layout from "../components/Layout/Layout";
-import "./Terms.css";
 
 const PrivacyPolicy = () => {
   return (
     <Layout>
-      <div className="bg-heading">
-        <h4>
-          <b>Privacy Policy</b>
-        </h4>
-      </div>
-      <div className="terms-container">
-        <p>Last updated:  14 January 2025 </p>
-        <h5 className="mt-5">Information Collection:</h5>
-        <p>
-          - We collect personal information, including but not limited to, name,
-          email address, and payment details, solely for the purpose of
-          processing in-game purchases and providing a personalized gaming
-          experience.
-        </p>
+      <section className="min-h-screen bg-neutral-950 text-neutral-200 px-6 md:px-16 py-16">
+        <div className="max-w-4xl mx-auto">
+          <div className="mb-10 text-center">
+            <h1 className="text-4xl font-bold bg-linear-to-r from-purple-500 to-orange-500 bg-clip-text text-transparent">
+              Privacy Policy
+            </h1>
+            <p className="text-sm text-neutral-400 mt-2">
+              Last updated: 13 November 2025
+            </p>
+          </div>
 
-        <h5 className="mt-5">Usage of Information:</h5>
-        <p>
-          - Personal information is used to facilitate transactions, deliver
-          purchased in-game items, and enhance user experience within the game.
-        </p>
+          <div className="space-y-8 text-sm md:text-base leading-relaxed">
+            <p>
+              Welcome to <b>Kyren Official</b>. Protecting your privacy is our
+              top priority. This Privacy Policy explains how we collect, use,
+              and safeguard your personal information when you use our website
+              and top-up services.
+            </p>
 
-        <h5 className="mt-5">Data Security:</h5>
-        <p>
-          - We employ industry-standard security measures to protect user data
-          against unauthorized access, disclosure, alteration, or destruction.
-        </p>
+            <h2 className="text-xl font-semibold text-purple-400">
+              1. Information Collection
+            </h2>
+            <p>
+              We collect personal details such as your name, email address,
+              phone number, and payment information only for processing
+              top-ups, ensuring order accuracy, and enhancing your user
+              experience.
+            </p>
 
-        <h5 className="mt-5">Third-Party Services:</h5>
-        <p>
-          - We may use third-party services for payment processing and
-          analytics, and users are encouraged to review the privacy policies of
-          these services.
-        </p>
+            <h2 className="text-xl font-semibold text-orange-400">
+              2. Usage of Information
+            </h2>
+            <p>
+              Collected data is used to process payments, deliver purchased
+              credits, improve customer support, and maintain transaction
+              security. We never sell or rent your personal information.
+            </p>
 
-        <h5 className="mt-5">Cookies:</h5>
-        <p>
-          - Our website uses cookies to enhance user experience. Users can
-          manage cookie preferences through their browser settings.
-        </p>
+            <h2 className="text-xl font-semibold text-purple-400">
+              3. Data Security
+            </h2>
+            <p>
+              We implement industry-standard security measures, including SSL
+              encryption and secure payment gateways, to protect your data
+              against unauthorized access or misuse.
+            </p>
 
-        <h5 className="mt-5">User Consent:</h5>
-        <p>
-          - By using our website and making in-game purchases, users consent to
-          the collection, processing, and storage of their personal information
-          in accordance with this privacy policy.
-        </p>
+            <h2 className="text-xl font-semibold text-orange-400">
+              4. Cookies
+            </h2>
+            <p>
+              Our site uses cookies to personalize your browsing experience and
+              remember your preferences. You may disable cookies in your browser
+              settings if you prefer.
+            </p>
 
-        <h5 className="mt-5">Children's Privacy:</h5>
-        <p>
-          - Our services are not directed to children under the age of 13. We do
-          not knowingly collect personal information from children. Parents or
-          legal guardians are responsible for ensuring that minors do not submit
-          personal information.
-        </p>
+            <h2 className="text-xl font-semibold text-purple-400">
+              5. Third-Party Services
+            </h2>
+            <p>
+              We may use third-party services for analytics and payment
+              processing. These providers have their own privacy policies that
+              govern their handling of your data.
+            </p>
 
-        <h5 className="mt-5">Data Retention:</h5>
-        <p>
-          - We retain user data for as long as necessary to fulfill the purposes
-          outlined in this privacy policy, unless a longer retention period is
-          required or permitted by law.
-        </p>
+            <h2 className="text-xl font-semibold text-orange-400">
+              6. Data Retention
+            </h2>
+            <p>
+              We retain your data only as long as necessary to fulfill the
+              purposes outlined here, or as required by law. Once data is no
+              longer needed, it will be securely deleted.
+            </p>
 
-        <h5 className="mt-5">Communication:</h5>
-        <p>
-          - Users may receive occasional emails related to their in-game
-          purchases, updates, and promotional offers. Users can opt out of
-          promotional communications.
-        </p>
+            <h2 className="text-xl font-semibold text-purple-400">
+              7. Children’s Privacy
+            </h2>
+            <p>
+              Our services are not directed to children under the age of 13. We
+              do not knowingly collect personal data from minors. Parents are
+              encouraged to supervise online activity.
+            </p>
 
-        <h5 className="mt-5">Policy Changes:</h5>
-        <p>
-          - We reserve the right to update or modify the privacy policy at any
-          time. Users will be notified of any changes.
-        </p>
+            <h2 className="text-xl font-semibold text-orange-400">
+              8. Policy Updates
+            </h2>
+            <p>
+              We reserve the right to update this Privacy Policy at any time.
+              Any changes will be reflected on this page with the updated
+              revision date.
+            </p>
 
-        <h5 className="mt-5">Contact Information:</h5>
-        <p>
-          - For any privacy-related concerns or questions, users can contact us
-          at topupplaygroundofficial@gmail.com
-        </p>
-        <p>
-          <i>
-            By using our website and services, users agree to the terms outlined
-            in this privacy policy.
-          </i>
-        </p>
-      </div>
+            <h2 className="text-xl font-semibold text-purple-400">
+              9. Contact Information
+            </h2>
+            <p>
+              For any privacy-related inquiries or assistance, feel free to
+              reach us:
+            </p>
+            <ul className="space-y-1 text-neutral-300 mt-2">
+              <li>
+                📧 <b>Email:</b>{" "}
+                <a
+                  href="mailto:support@kyrenofficial.com"
+                  className="text-purple-400 hover:text-orange-400"
+                >
+                  support@kyrenofficial.com
+                </a>
+              </li>
+              <li>
+                💬 <b>WhatsApp:</b>{" "}
+                <a
+                  href="https://wa.me/917099960475"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-purple-400 hover:text-orange-400"
+                >
+                  +91 70999 60475
+                </a>
+              </li>
+            </ul>
+
+            <p className="italic text-neutral-400 mt-8 border-t border-neutral-800 pt-6">
+              By using our website and services, you acknowledge that you have
+              read and agreed to this Privacy Policy.
+            </p>
+          </div>
+        </div>
+      </section>
     </Layout>
   );
 };

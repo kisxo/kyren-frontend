@@ -11,7 +11,7 @@ import AdminDashboard from "./admin/AdminDashboard";
 import AdminUsers from "./admin/AdminUsers";
 import EditUser from "./admin/EditUser";
 import AdminPayments from "./admin/AdminPayments";
-import Terms from "./pages/Terms";
+import TermsAndConditions from "./pages/TermsAndConditions";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import RefundPolicy from "./pages/RefundPolicy";
 import AdminProduct from "./admin/AdminProduct";
@@ -78,30 +78,6 @@ function App() {
                     }
                 />
                 <Route
-                    path="/privacy-policy"
-                    element={
-                        <PublicRoute>
-                            <PrivacyPolicy />
-                        </PublicRoute>
-                    }
-                />
-                <Route
-                    path="/terms"
-                    element={
-                        <PublicRoute>
-                            <Terms />
-                        </PublicRoute>
-                    }
-                ></Route>
-                <Route
-                    path="/refund-policy"
-                    element={
-                        <PublicRoute>
-                            <RefundPolicy />
-                        </PublicRoute>
-                    }
-                ></Route>
-                <Route
                     path="/login"
                     element={
                         <PublicRoute>
@@ -139,7 +115,7 @@ function App() {
                         </ProtectedRoute>
                     }
                 />
-                <Route path="/terms" element={<Terms />} />
+                <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
                 {/* <Route path="/rankBoost" element={<Rankboosting/>}/> */}
                 <Route path="/privacy-policy" element={<PrivacyPolicy />} />
                 <Route path="/refund-policy" element={<RefundPolicy />} />
