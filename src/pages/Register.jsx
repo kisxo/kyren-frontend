@@ -10,6 +10,7 @@ import { IoPersonOutline } from "react-icons/io5";
 import { IoPhonePortraitOutline } from "react-icons/io5";
 
 const Register = () => {
+    const [messageApi, contextHolder] = message.useMessage();
     const navigate = useNavigate();
     const [form, setForm] = useState({});
     const [tab, setTab] = useState(0);
@@ -73,7 +74,7 @@ const Register = () => {
             return;
         }
         if (form?.mobile?.length > 10 || form?.mobile?.length < 10) {
-            return message.error("Enter 10 digits Mobile Number only");
+            return messageApi.error("Enter 10 digits Mobile Number only");
         }
 
         try {
@@ -82,7 +83,7 @@ const Register = () => {
                 message.success(res.data.message);
                 navigate("/login");
             } else {
-                message.error(res.data.message);
+                messageApi.error(res.data.message);
             }
         } catch (error) {
             console.log(error);
@@ -91,6 +92,7 @@ const Register = () => {
 
     return (
         <div className="login-container">
+            {contextHolder}
             <div
                 className="back-btn flex items-center"
                 onClick={() => navigate("/")}

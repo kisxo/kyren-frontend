@@ -1,12 +1,14 @@
 import React, { useState } from "react";
 import Layout from "../components/Layout/Layout";
 import { Link, useNavigate } from "react-router";
-import { message } from "antd";
+import {  message } from 'antd';
 import axios from "axios";
 import "./Login.css";
 import { AppUrl } from "../utils/appData";
 
 const Login = () => {
+  const [messageApi, contextHolder] = message.useMessage();
+
   const navigate = useNavigate();
   const [form, setForm] = useState({});
 
@@ -27,7 +29,7 @@ const Login = () => {
           navigate("/");
         }
       } else {
-        message.error(res.data.message);
+        messageApi.error(res.data.message);
       }
     } catch (error) {
       console.log(error);
@@ -37,6 +39,7 @@ const Login = () => {
 
   return (
     <div className="login-container">
+      {contextHolder}
       <div className="back-btn flex items-center" onClick={() => navigate("/")}>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"/><line x1="216" y1="128" x2="40" y2="128" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="10"/><polyline points="112 56 40 128 112 200" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="10"/></svg>
         Back
