@@ -154,6 +154,26 @@ const AdminProduct = () => {
                                         </td>
                                         <td className="space-x-4">
                                             <button
+                                                class="btn btn-info"
+                                                onClick={() => {
+                                                    navigate(
+                                                        `/admin-edit-groups/${product?._id}`
+                                                    );
+                                                }}
+                                            >
+                                                Group
+                                            </button>
+                                            <button
+                                                class="btn btn-primary"
+                                                onClick={() => {
+                                                    navigate(
+                                                        `/admin-add-tab/${product?._id}`
+                                                    );
+                                                }}
+                                            >
+                                                Tab
+                                            </button>
+                                            <button
                                                 class="btn btn-success"
                                                 onClick={() => {
                                                     navigate(

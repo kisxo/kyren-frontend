@@ -1,0 +1,48 @@
+.group-list-container{
+    padding-top: 1rem;
+    background-color: white;
+    border-radius: .3rem;
+    text-align: center;
+    .group-list-title{
+        font-weight: bold;
+        color: var(--primary-500);
+    }
+}
+
+.group-list{
+    padding-block: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+.group{
+    text-align: center;
+    padding: .5rem;
+    width: 20%;
+    max-width: 20%;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    align-items: center;
+    border: 1px solid var(--primary-100);
+    font-size: .5rem;
+
+    img{
+        height: 50px;
+        width: 50px;
+    } 
+
+    button{
+        font-weight: bolder;
+        font-size: .7rem;
+    }
+}
+
+.group-delete{
+    padding: .2rem .4rem;
+    color: white;
+    background-color: rgb(244, 38, 38);
+    margin-inline: auto;
+}

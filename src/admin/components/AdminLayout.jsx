@@ -38,12 +38,12 @@ const AdminLayout = (props) => {
                 </div>
             )}
 
-            <div className="flex h-screen">
+            <div className="flex min-h-screen">
                 <div className="hidden lg:block w-50 p-4 border">
                     <AdminSidebar />
                 </div>
 
-                <div className="p-4 w-full">
+                <div className="p-4 min-w-full">
                     <h1 className="text-3xl font-semibold w-full mb-8">
                             {props.title}
                     </h1>

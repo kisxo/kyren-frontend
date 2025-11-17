@@ -38,6 +38,8 @@ import { useSelector } from "react-redux";
 import Leaderboard from "./pages/Leaderboard";
 import Support from "./pages/Support";
 import LoadingPage from "./pages/LoadingPage";
+import AddBanner from "./admin/AddBanner";
+import AdminEditTabs from "./admin/AdminEditTabs";
 // import Rankboosting from "./pages/Rankboosting";
 
 function App() {
@@ -56,7 +58,7 @@ function App() {
     }, []);
 
     if (loading) {
-      return <LoadingPage />;
+        return <LoadingPage />;
     }
 
     return (
@@ -115,7 +117,10 @@ function App() {
                         </ProtectedRoute>
                     }
                 />
-                <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
+                <Route
+                    path="/terms-and-conditions"
+                    element={<TermsAndConditions />}
+                />
                 {/* <Route path="/rankBoost" element={<Rankboosting/>}/> */}
                 <Route path="/privacy-policy" element={<PrivacyPolicy />} />
                 <Route path="/refund-policy" element={<RefundPolicy />} />
@@ -183,14 +188,14 @@ function App() {
                         </ProtectedRoute>
                     }
                 />
-                {/* <Route
+                <Route
           path="/admin-add-banner"
           element={
             <ProtectedRoute>
-              <AddBanner />
+              <AddBanner/>
             </ProtectedRoute>
           }
-        /> */}
+        />
                 <Route
                     path="/admin-add-product"
                     element={
@@ -200,13 +205,13 @@ function App() {
                     }
                 />
                 <Route
-          path="/admin-edit-product/:id?"
-          element={
-            <ProtectedRoute>
-              <AdminEditProduct />
-            </ProtectedRoute>
-          }
-        />
+                    path="/admin-edit-product/:id?"
+                    element={
+                        <ProtectedRoute>
+                            <AdminEditProduct />
+                        </ProtectedRoute>
+                    }
+                />
                 {/* <Route
           path="/admin-edit-groups/:id?"
           element={
@@ -214,7 +219,7 @@ function App() {
               <AdminEditGroups/>
             </ProtectedRoute>
           }
-        />
+        /> */}
                 <Route
           path="/admin-add-tab/:id?"
           element={
@@ -222,7 +227,7 @@ function App() {
               <AdminEditTabs/>
             </ProtectedRoute>
           }
-        /> */}
+        />
                 <Route
                     path="/admin-users"
                     element={
