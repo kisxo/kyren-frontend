@@ -1098,7 +1098,7 @@ const ProductInfo = (props) => {
                                                 >
                                                     <img
                                                         className="tab-img-top"
-                                                        src={`https://wurustore.in/${tab.image}`}
+                                                        src={AppUrl+ `/${tab.image}`}
                                                         alt="Tab image"
                                                     />
                                                     <div className="tab-body">

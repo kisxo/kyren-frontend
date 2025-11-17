@@ -27,7 +27,7 @@ const ItemCard =  ({ amount, image, price}) => {
   {
     return (
       <div className="item-card" >
-        <img className="card-img-top" src={`https://wurustore.in/${image}`}  alt="Card image cap"/>
+        <img className="card-img-top" src={AppUrl + `/${image}`}  alt="Card image cap"/>
         <p className="card-text">{amount}</p>
         <div className="card-price">
           <p className="price">&#8377;{price}</p>
@@ -39,7 +39,7 @@ const ItemCard =  ({ amount, image, price}) => {
   else{
     return (
       <div className="item-card">
-        <img className="card-img-top" src="https://wurustore.in/media/groupIcon/default.png" alt="Card image cap"/>
+        <img className="card-img-top" src={AppUrl + "/media/groupIcon/default.png"} alt="Card image cap"/>
         <div className="card-body">
           <p className="card-text">{amount}</p>
           <p className="card-text">&#8377;{price}</p>
