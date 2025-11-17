@@ -128,17 +128,20 @@ const AdminEditProduct = () => {
       {
         formData.append(`cost[${index}][image]`, costItem.image);
       }
-      if(costItem.groupName)
+      if(costItem.tabName)
       {
         formData.append(`cost[${index}][tabName]`, costItem.tabName);
       }
-      if(costItem.image)
+      if(costItem.tabImage)
       {
         formData.append(`cost[${index}][tabImage]`, costItem.tabImage);
       }
     });
 
-    setLoading(true);
+    // setLoading(true);
+
+            console.log(formData);
+        return
 
     try {
       const res = await axios.post(AppUrl + "/api/product/update-product", formData, {

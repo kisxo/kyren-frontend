@@ -2,6 +2,7 @@
 import React from 'react'
 import ItemCard from '../../components/ItemCard';
 import "./ProductItemList.css"
+import { AppUrl } from '../../utils/appData';
 
 const ProductItemList = ({product}) => {
 
@@ -46,7 +47,7 @@ const ProductCard = ({amount, image}) => {
   {
     return (
       <div className="group-item-card" >
-        <img className="top" src={`https://wurustore.in/${image}`}  alt="Card image cap"/>
+        <img className="top" src={AppUrl + `/${image}`}  alt="Card image cap"/>
         <div className="body">
           <p className="text">{amount}</p>
         </div>
@@ -56,7 +57,7 @@ const ProductCard = ({amount, image}) => {
   else{
     return (
       <div className="group-item-card">
-        <img className="top" src="https://wurustore.in/media/groupIcon/default.png" alt="Card image cap"/>
+        <img className="top" src={AppUrl + "/media/groupIcon/default.png"} alt="Card image cap"/>
         <div className="body">
           <p className="text">{amount}</p>
         </div>

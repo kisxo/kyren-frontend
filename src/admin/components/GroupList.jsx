@@ -46,7 +46,7 @@ const GroupList = ({product}) => {
     <div className='group-list'>
         {product.groups.map((group) => (
             <div className='group'>
-                <img src={`https://wurustore.in/${group.image}`} style={{height:"50px",width:"50px"}} alt="" />
+                <img src={AppUrl + `/${group.image}`} style={{height:"50px",width:"50px"}} alt="" />
                 <span >{group["name"]}</span>
                 <button className='group-delete btn btn-danger' type='button' data-group-name={group['name']} data-product-id={product['_id']} onClickCapture={deleteGroup}>
                   Delete

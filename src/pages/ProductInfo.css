@@ -806,6 +806,7 @@
     border-radius: .5rem;
     background-color: hsla(0, 0%, 100%, 0.952);
     border: 1px solid var(--primary-300);
+    color: #444;
 
     p{
       color: var(--primary-400);
