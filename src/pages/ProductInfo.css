@@ -145,13 +145,8 @@
   flex-wrap: wrap;
 }
 .package-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin-block: 1.5rem;
 
   .item-container{
-    width: 47%;
     border-radius: .2rem;
     /* box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; */
     transition: all .3s ease-in-out;
@@ -165,7 +160,7 @@
 }
 
 .package-container .active{
-  transform: scale(1.02);
+  transform: scale(1.01);
   .item-card{
     outline: 0;
     /* outline: 1px solid hsl(289, 74%, 84%); */

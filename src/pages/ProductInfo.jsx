@@ -1114,7 +1114,7 @@ const ProductInfo = (props) => {
                         </div>
                     </div>
 
-                    <div className="package-container">
+                    <div className="package-container grid grid-cols-2 w-full lg:grid-cols-3 gap-4 gap-y-2">
                         {product?.tabs?.length === 1 ? (
                             <>
                                 {product?.cost?.map((item, index) => {
