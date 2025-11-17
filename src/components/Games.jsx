@@ -192,14 +192,21 @@ const Games = (props) => {
             <h2 className="text-2xl font-bold">Game Top Up</h2>
             <div className="grid grid-cols-2 md:grid-cols-4: lg:grid-cols-6 gap-4">
                 {products?.map((item, index) => {
+                    // return (
+                    //     <>
+                    //         {selectedCategory === "All" ? (
+                    //             <ProductCard props={item} key={index} />
+                    //         ) : (
+                    //             selectedCategory === item?.category && (
+                    //                 <ProductCard props={item} key={index} />
+                    //             )
+                    //         )}
+                    //     </>
+                    // );
                     return (
                         <>
-                            {selectedCategory === "All" ? (
+                            {item.stock === "Yes" && (
                                 <ProductCard props={item} key={index} />
-                            ) : (
-                                selectedCategory === item?.category && (
-                                    <ProductCard props={item} key={index} />
-                                )
                             )}
                         </>
                     );
@@ -231,7 +238,11 @@ const ProductCard = ({ props }) => {
                 {props?.name}
             </div>
 
-            {props?.tag && <div className="product-tag absolute top-0 right-0 px-3 py-1 bg-linear-to-r from-pink-500 to-rose-500 rounded-bl-xl text-sm font-bold">{props?.tag}</div>}
+            {props?.tag && (
+                <div className="product-tag absolute top-0 right-0 px-3 py-1 bg-linear-to-r from-pink-500 to-rose-500 rounded-bl-xl text-sm font-bold">
+                    {props?.tag}
+                </div>
+            )}
         </div>
     );
 };

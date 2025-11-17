@@ -14,6 +14,7 @@ import SearchContainer from "../SearchContainer.jsx";
 import getUserData from "../../utils/userDataService.js";
 import logo from "./../../assets/logo.png";
 import { LuGamepad2 } from "react-icons/lu";
+import { Wallet, User, Plus } from "lucide-react";
 
 const Header = () => {
     const { user } = useSelector((state) => state.user);
@@ -33,18 +34,45 @@ const Header = () => {
     return (
         <div className="header bg-amber-100">
             <div className="header-main">
-                <div className="logo flex align-middle items-center" onClick={() => navigate("/")}>
+                <div
+                    className="logo flex align-middle items-center"
+                    onClick={() => navigate("/")}
+                >
                     <img src={logo} className="size-10" alt="" />
-                    <span className="font-bold">Kyren Official Store</span> 
-                    <LuGamepad2/>
+                    <span className="font-bold">Kyren Official Store</span>
+                    <LuGamepad2 />
                 </div>
 
                 {user ? (
-                    <div
-                        className="wallet"
-                        onClick={() => setSideMenu(!sideMenu)}
-                    >
-                        hi
+                    // <div
+                    //     className="wallet"
+                    //     onClick={() => setSideMenu(!sideMenu)}
+                    // >
+                    //     hi
+                    // </div>
+
+                    <div className="flex ms-auto items-center gap-3">
+                        {/* Wallet Section */}
+                        <div className="flex items-center gap-2 bg-neutral-800/70 pe-2 rounded-full backdrop-blur-sm border border-neutral-700 shadow-sm hover:bg-neutral-700/70 transition">
+                            <button className="flex items-center justify-center w-8 h-8 rounded-full bg-blue-500 hover:bg-blue-600 transition text-white">
+                                <Plus size={18} />
+                            </button>
+
+                            <div className="flex items-center gap-2 text-white">
+                                <Wallet size={20} className="opacity-80" />
+                                <span className="font-medium text-sm">
+                                    {balance || 0}
+                                </span>
+                            </div>
+                        </div>
+
+                        {/* User Icon */}
+                        <Link
+                            className="w-10 h-10 flex items-center justify-center rounded-full bg-neutral-800 border border-neutral-700 hover:bg-neutral-700 transition text-white shadow-sm"
+                            to="/user-dashboard"
+                        >
+                            <User size={20} />
+                        </Link>
                     </div>
                 ) : (
                     <Link className="login-btn text-white" to="/login">

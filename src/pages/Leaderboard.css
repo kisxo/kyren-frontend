@@ -22,11 +22,12 @@
             width: 50%;
             text-align: center;
             padding-block: .5rem;
-            background-color: rgb(46, 46, 46);
+            /* background-color: rgb(46, 46, 46); */
+            border: 1px solid #333;
         }
     }
 
     .active-tab{
-        background-color: var(--t);
+        background-color: rgb(46, 46, 46);
     }
 }
