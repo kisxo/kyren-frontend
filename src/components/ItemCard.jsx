@@ -29,7 +29,7 @@ const ItemCard =  ({ amount, image, price}) => {
       <div className="item-card" >
         <img className="card-img-top" src={AppUrl + `/${image}`}  alt="Card image cap"/>
         <p className="card-text">{amount}</p>
-        <div className="card-price">
+        <div className="card-price flex flex-col pb-4">
           <p className="price">&#8377;{price}</p>
           <p className="cost">&#8377;{Math.ceil(price*1.05)}</p>
         </div>
@@ -38,12 +38,12 @@ const ItemCard =  ({ amount, image, price}) => {
   }
   else{
     return (
-      <div className="item-card">
+      <div className="item-card" >
         <img className="card-img-top" src={AppUrl + "/media/groupIcon/default.png"} alt="Card image cap"/>
-        <div className="card-body">
-          <p className="card-text">{amount}</p>
-          <p className="card-text">&#8377;{price}</p>
-          <p></p>
+        <p className="card-text">{amount}</p>
+        <div className="card-price flex flex-col pb-4">
+          <p className="price">&#8377;{price}</p>
+          <p className="cost">&#8377;{Math.ceil(price*1.05)}</p>
         </div>
       </div>
     );
