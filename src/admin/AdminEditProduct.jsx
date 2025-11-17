@@ -138,10 +138,10 @@ const AdminEditProduct = () => {
       }
     });
 
-    // setLoading(true);
+    setLoading(true);
 
-            console.log(formData);
-        return
+        //     console.log(formData);
+        // return
 
     try {
       const res = await axios.post(AppUrl + "/api/product/update-product", formData, {
