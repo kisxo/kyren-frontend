@@ -176,7 +176,10 @@ const Games = (props) => {
     }, props);
 
     return (
-        <div className="m-4 p-4 bg-neutral-900 space-y-4 rounded-md shadow" id="game-top-up">
+        <div
+            className="m-4 p-4 bg-neutral-900 space-y-4 rounded-md shadow"
+            id="game-top-up"
+        >
             {/* <div className="flex gap-4 overflow-x-scroll text-nowrap">
         {category?.map((item, index) => {
           return (
@@ -209,7 +212,8 @@ const Games = (props) => {
 const ProductCard = ({ props }) => {
     const navigate = useNavigate();
     return (
-        <div className="aspect-square relative rounded-lg overflow-hidden 
+        <div
+            className="aspect-square relative rounded-lg overflow-hidden 
   bg-linear-to-br from-neutral-900 via-neutral-950 to-black
   border border-white/5
   shadow-[0_0_25px_rgba(147,51,234,0.05),0_0_50px_rgba(251,146,60,0.05),inset_0_0_20px_rgba(255,255,255,0.03)]
@@ -223,13 +227,11 @@ const ProductCard = ({ props }) => {
                 alt={props?.name}
             />
 
-            <div className="absolute text-xs backdrop-blur-xs inset-x-1 bottom-1 text-center rounded py-1 border border-neutral-50/40">
-              {props?.name}
+            <div className="absolute text-xs backdrop-blur-xs inset-x-1 bottom-1 text-center rounded py-2 border border-neutral-50/40">
+                {props?.name}
             </div>
 
-            {/* {props?.tag && (
-        <span className="product-tag">{props?.tag}</span>
-      )} */}
+            {props?.tag && <div className="product-tag absolute top-0 right-0 px-3 py-1 bg-linear-to-r from-pink-500 to-rose-500 rounded-bl-xl text-sm font-bold">{props?.tag}</div>}
         </div>
     );
 };
