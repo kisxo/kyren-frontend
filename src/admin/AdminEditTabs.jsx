@@ -131,7 +131,7 @@ function AdminEditTabs() {
                         <div>
                             <input
                                 type="text"
-                                className="input"
+                                className="input w-full"
                                 value={name}
                                 onChange={handleInputChange}
                                 placeholder="Enter Tab name"
@@ -145,7 +145,7 @@ function AdminEditTabs() {
                         <div>
                             <input
                                 type="file"
-                                className="input"
+                                className="input w-full"
                                 onChange={handleFileChange}
                                 accept="image/*"
                             />
@@ -167,14 +167,14 @@ function AdminEditTabs() {
                     >
                         <input
                             type="text"
-                            className="input"
+                            className="input w-full"
                             value={itemId}
                             onChange={handleItemIdChange}
                             placeholder="Enter Product ID"
                         />
                         <input
                             type="text"
-                            className="input"
+                            className="input w-full"
                             value={tabName}
                             onChange={handleTabNameChange}
                             placeholder="Enter Tab Name"

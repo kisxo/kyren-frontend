@@ -32,14 +32,13 @@ import GameAccounts from "./pages/GameAccounts";
 import AdminAccount from "./admin/AdminAccount";
 import AdminAddAccount from "./admin/AdminAddAccount";
 // import AddBanner from "./admin/AddBanner";
-// import AdminEditGroups from "./admin/AdminEditGroups"
-// import AdminEditTabs from "./admin/AdminEditTabs";
+import AdminEditGroups from "./admin/AdminEditGroups"
+import AdminEditTabs from "./admin/AdminEditTabs";
 import { useSelector } from "react-redux";
 import Leaderboard from "./pages/Leaderboard";
 import Support from "./pages/Support";
 import LoadingPage from "./pages/LoadingPage";
 import AddBanner from "./admin/AddBanner";
-import AdminEditTabs from "./admin/AdminEditTabs";
 // import Rankboosting from "./pages/Rankboosting";
 
 function App() {
@@ -212,14 +211,14 @@ function App() {
                         </ProtectedRoute>
                     }
                 />
-                {/* <Route
+                <Route
           path="/admin-edit-groups/:id?"
           element={
             <ProtectedRoute>
               <AdminEditGroups/>
             </ProtectedRoute>
           }
-        /> */}
+        />
                 <Route
           path="/admin-add-tab/:id?"
           element={

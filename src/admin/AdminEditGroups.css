@@ -1,0 +1,30 @@
+.group-dashboard{
+   .page-title {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid #bbb;
+    }
+}
+
+.add-group-form{
+    border-radius: .2rem;
+    font-size: .9rem;
+    margin-block: 1rem;
+    padding: 1rem;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    label{
+        color: #555;
+        font-weight: bold;
+    }
+}
+
+.item-group-add-container{
+    background-color: rgb(216, 7, 7);
+}

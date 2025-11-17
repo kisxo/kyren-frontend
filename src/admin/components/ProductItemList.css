@@ -1,0 +1,38 @@
+.item-row{
+    border: 1px solid var(--primary-100);
+    background-color: white;
+    display: flex;
+
+    & > *{
+        text-wrap: wrap;
+        word-break: break-all;
+        font-size: .6rem;
+        padding-block: .5rem;
+        font-weight: bold;
+        width: 30%;
+        max-width: 30% !important;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    & > *:nth-child(even){
+        width: 20%;
+        max-width: 20% !important;
+        background-color: #f7f7f7;
+    }
+
+    .id{
+        word-break: break-all;
+    }
+}
+
+.group-item-card{
+    display: flex;
+    flex-direction: column;
+    
+    img{
+        max-width: 80px;
+        object-fit: contain;
+    }
+}
