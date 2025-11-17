@@ -4,6 +4,7 @@ import { message, Pagination, Select } from "antd";
 import axios from "axios";
 import { useNavigate } from "react-router";
 import "./AdminUsers.css";
+import { AppUrl } from "../utils/appData";
 
 const { Option } = Select;
 
@@ -47,7 +48,7 @@ const AdminUsers = () => {
 
   const getAllUser = async () => {
     try {
-      const res = await axios.get("/api/admin/get-all-users", {
+      const res = await axios.get(AppUrl + "/api/admin/get-all-users", {
         headers: {
           Authorization: "Bearer " + localStorage.getItem("token"),
         },
@@ -75,17 +76,16 @@ const AdminUsers = () => {
     filteredUsers ?? allUser?.slice(indexOfFirstUser, indexOfLastUser);
 
   return (
-    <AdminLayout>
+    <AdminLayout title="Customers">
       <div className="admin-users-container">
         <div className="page-title">
-          <h3 className="m-0">Customers</h3>
           <h6>Total Users - {allUser?.length}</h6>
         </div>
         <hr />
         <div className="table-container">
           <div className="tools">
             <div className="form-fields">
-              <SearchIcon className="text-dark me-2" />
+              {/* <SearchIcon className="text-dark me-2" /> */}
               <input
                 className="mb-4"
                 type="search"
@@ -158,12 +158,15 @@ const AdminUsers = () => {
                       </td>
                       <td>
                         <div className="d-flex gap-2">
-                          <EditIcon
+                          {/* <EditIcon
                             onClick={() =>
                               navigate(`/admin-edit-user/${user?._id}`)
                             }
                             className="me-2 text-muted"
-                          />
+                          /> */}
+                          <button className="btn btn-info" onClick={() =>
+                              navigate(`/admin-edit-user/${user?._id}`)
+                            }>Edit</button>
                         </div>
                       </td>
                     </tr>

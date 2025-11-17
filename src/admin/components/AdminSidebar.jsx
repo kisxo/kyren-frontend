@@ -21,7 +21,7 @@ const navlist = [
     { link: "/admin-add-banner", label: "Banner", icon: Image },
     { link: "/admin-users", label: "Users", icon: Users },
     { link: "/admin-payments", label: "Payments", icon: CreditCard },
-    { link: "/admin-accounts", label: "Accounts", icon: Wallet },
+    // { link: "/admin-accounts", label: "Accounts", icon: Wallet },
 ];
 
 const AdminSidebar = () => {

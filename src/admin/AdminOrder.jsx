@@ -2,9 +2,10 @@ import React, { useEffect, useState } from "react";
 import AdminLayout from "./components/AdminLayout";
 import { message } from "antd";
 import axios from "axios";
-import "./AdminUsers.css";
+// import "./AdminUsers.css";
 // import IMAGES from "../img/image";
 import { Link, useNavigate, useParams } from "react-router";
+import { AppUrl } from "../utils/appData";
 // import RemoveRedEyeIcon from "@mui/icons-material/RemoveRedEye";
 
 const AdminUsers = () => {
@@ -29,7 +30,7 @@ const AdminUsers = () => {
   const getAllOrders = async (e) => {
     try {
       setLoading(true);
-      const res = await axios.get("/api/admin/admin-get-all-orders", {
+      const res = await axios.get(AppUrl + "/api/admin/admin-get-all-orders", {
         headers: {
           Authorization: "Bearer " + localStorage.getItem("token"),
         },
@@ -87,10 +88,9 @@ const AdminUsers = () => {
   }, [searchEmail, selectedType, selectedDate, selectedMonth]);
 
   return (
-    <AdminLayout>
-      <div className="admin-users-container">
+    <AdminLayout title="Orders">
+      <div className="">
         <div className="page-title">
-          <h3 className="m-0">Orders</h3>
           <h6>Total Orders - {allUser?.length}</h6>
         </div>
         <hr />
@@ -226,11 +226,9 @@ const AdminUsers = () => {
                         </td>
                         <td align="center">
                           <small>
-                            <RemoveRedEyeIcon
-                              onClick={() =>
+                            <button className="btn btn-info" onClick={() =>
                                 navigate(`/admin-view-order/${user?.orderId}`)
-                              }
-                            />
+                              }>View</button>
                           </small>
                         </td>
                       </tr>

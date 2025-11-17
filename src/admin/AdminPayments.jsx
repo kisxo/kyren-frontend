@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import AdminLayout from "./components/AdminLayout";
 import axios from "axios";
 import { message } from "antd";
+import { AppUrl } from "../utils/appData";
 
 const AdminPayments = () => {
   const [payments, setPayments] = useState(null);
@@ -11,7 +12,7 @@ const AdminPayments = () => {
   const getAllPayments = async () => {
     try {
       setLoading(true);
-      const res = await axios.get("/api/payment/get-all-payments", {
+      const res = await axios.get(AppUrl + "/api/payment/get-all-payments", {
         headers: {
           Authorization: "Bearer " + localStorage.getItem("token"),
         },
@@ -34,9 +35,8 @@ const AdminPayments = () => {
   }, []);
 
   return (
-    <AdminLayout>
+    <AdminLayout title="Payments">
       <div className="page-title">
-        <h3 className="m-0">Payments</h3>
         <h6>Total Payments - {payments?.length}</h6>
       </div>
       <hr />
