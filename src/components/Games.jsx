@@ -234,7 +234,7 @@ const ProductCard = ({ props }) => {
                 alt={props?.name}
             />
 
-            <div className="absolute text-xs backdrop-blur-xs inset-x-1 bottom-1 text-center rounded py-2 border border-neutral-50/40">
+            <div className="absolute text-xs backdrop-blur-xs inset-x-1 bottom-1 text-center rounded py-2 border border-neutral-50/30 bg-black/20">
                 {props?.name}
             </div>
 
