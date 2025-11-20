@@ -36,9 +36,10 @@ import AdminEditGroups from "./admin/AdminEditGroups"
 import AdminEditTabs from "./admin/AdminEditTabs";
 import { useSelector } from "react-redux";
 import Leaderboard from "./pages/Leaderboard";
-import Support from "./pages/Support";
+import Copyright from "./pages/Copyright";
 import LoadingPage from "./pages/LoadingPage";
 import AddBanner from "./admin/AddBanner";
+import ContactUs from "./pages/ContactUs";
 // import Rankboosting from "./pages/Rankboosting";
 
 function App() {
@@ -124,6 +125,8 @@ function App() {
                 <Route path="/privacy-policy" element={<PrivacyPolicy />} />
                 <Route path="/refund-policy" element={<RefundPolicy />} />
                 <Route path="/leaderboard" element={<Leaderboard />} />
+                <Route path="/contact-us" element={<ContactUs />} />
+                <Route path="/copyright" element={<Copyright />} />
 
                 <Route path="/game-accounts" element={<GameAccounts />} />
 

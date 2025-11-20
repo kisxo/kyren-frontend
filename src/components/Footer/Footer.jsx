@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, useLocation, useNavigate } from "react-router";
+import { Link} from "react-router";
 import { useSelector } from "react-redux";
 // import "../Footer/Footer.css";
 
@@ -27,11 +27,11 @@ const Footer = () => {
                     </section>
 
                     <section class="flex justify-center gap-4">
-                        <Link href="#!">Contact Us</Link>
-                        <Link href="/terms-and-conditions">Terms & Conditions</Link>
-                        <Link href="/privacy-policy">Privacy Policy</Link>
-                        <Link href="#!">Refund Policy</Link>
-                        <Link href="#!">Copyright</Link>
+                        <Link to="/contact-us">Contact Us</Link>
+                        <Link to="/terms-and-conditions">Terms & Conditions</Link>
+                        <Link to="/privacy-policy">Privacy Policy</Link>
+                        <Link to="/refund-policy">Refund Policy</Link>
+                        <Link to="/copyright">Copyright</Link>
                     </section>
                 </div>
 
