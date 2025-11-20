@@ -39,7 +39,7 @@ const ItemCard =  ({ amount, image, price}) => {
   else{
     return (
       <div className="item-card" >
-        <img className="card-img-top" src={AppUrl + "/media/groupIcon/default.png"} alt="Card image cap"/>
+        {/* <img className="card-img-top" src={AppUrl + "/media/groupIcon/default.png"} alt="Card image cap"/> */}
         <p className="card-text">{amount}</p>
         <div className="card-price flex flex-col pb-4">
           <p className="price">&#8377;{price}</p>

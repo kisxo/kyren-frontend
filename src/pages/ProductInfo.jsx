@@ -1180,8 +1180,8 @@ const ProductInfo = (props) => {
                             </span>
                         </p> */}
 
-                        <label className="inline-flex justify-between w-full items-center z-10 rounded-lg p-2 border border-neutral-800 bg-neutral-800/20 has-[:checked]:border-indigo-500 has-[:checked]:text-indigo-900 has-[:checked]:bg-white/95 has-[:checked]:font-bold hover:bg-slate-200 hover:text-neutral-800 transition-all cursor-pointer has-[:checked]:transition-all has-[:checked]:duration-500 duration-500 relative [&_p]:has-[:checked]:translate-y-0 [&_p]:has-[:checked]:transition-transform [&_p]:has-[:checked]:duration-500 [&_p]:has-[:checked]:opacity-100 overflow-hidden">
-                            <div className="inline-flex items-center justify-center gap-2 relative z-10">
+                        <label className="inline-flex justify-between w-full items-center rounded-lg p-2 border border-neutral-800 bg-neutral-800/20 has-[:checked]:border-indigo-500 has-[:checked]:text-indigo-900 has-[:checked]:bg-white/95 has-[:checked]:font-bold hover:bg-slate-200 hover:text-neutral-800 transition-all cursor-pointer has-[:checked]:transition-all has-[:checked]:duration-500 duration-500 relative [&_p]:has-[:checked]:translate-y-0 [&_p]:has-[:checked]:transition-transform [&_p]:has-[:checked]:duration-500 [&_p]:has-[:checked]:opacity-100 overflow-hidden">
+                            <div className="inline-flex items-center justify-center gap-2 relative">
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
                                     viewBox="0 0 333334 199007"
@@ -1228,8 +1228,8 @@ const ProductInfo = (props) => {
                                 checked={paymentMethod === "UPI"}
                             />
                         </label>
-                        <label className="inline-flex justify-between w-full items-center z-10 rounded-lg p-2 border border-neutral-800 bg-neutral-800/20 has-[:checked]:border-indigo-500 has-[:checked]:text-indigo-900 has-[:checked]:bg-white/95 has-[:checked]:font-bold hover:bg-slate-200 hover:text-neutral-800 transition-all cursor-pointer has-[:checked]:transition-all has-[:checked]:duration-500 duration-500 relative [&_p]:has-[:checked]:translate-y-0 [&_p]:has-[:checked]:transition-transform [&_p]:has-[:checked]:duration-500 [&_p]:has-[:checked]:opacity-100 overflow-hidden">
-                            <div className="inline-flex items-center justify-center gap-2 relative z-10">
+                        <label className="inline-flex justify-between w-full items-center rounded-lg p-2 border border-neutral-800 bg-neutral-800/20 has-[:checked]:border-indigo-500 has-[:checked]:text-indigo-900 has-[:checked]:bg-white/95 has-[:checked]:font-bold hover:bg-slate-200 hover:text-neutral-800 transition-all cursor-pointer has-[:checked]:transition-all has-[:checked]:duration-500 duration-500 relative [&_p]:has-[:checked]:translate-y-0 [&_p]:has-[:checked]:transition-transform [&_p]:has-[:checked]:duration-500 [&_p]:has-[:checked]:opacity-100 overflow-hidden">
+                            <div className="inline-flex items-center justify-center gap-2 relative">
                                 <Wallet
                                     height={32}
                                     width={32}
@@ -1256,8 +1256,8 @@ const ProductInfo = (props) => {
                                 checked={paymentMethod === "WALLET"}
                             />
                         </label>
-                        <label className="inline-flex justify-between w-full items-center z-10 rounded-lg p-2 border border-neutral-800 bg-neutral-800/20 has-[:checked]:border-indigo-500 has-[:checked]:text-indigo-900 has-[:checked]:bg-white/95 has-[:checked]:font-bold hover:bg-slate-200 hover:text-neutral-800 transition-all cursor-pointer has-[:checked]:transition-all has-[:checked]:duration-500 duration-500 relative [&_p]:has-[:checked]:translate-y-0 [&_p]:has-[:checked]:transition-transform [&_p]:has-[:checked]:duration-500 [&_p]:has-[:checked]:opacity-100 overflow-hidden">
-                            <div className="inline-flex items-center justify-center gap-2 relative z-10">
+                        <label className="inline-flex justify-between w-full items-center rounded-lg p-2 border border-neutral-800 bg-neutral-800/20 has-[:checked]:border-indigo-500 has-[:checked]:text-indigo-900 has-[:checked]:bg-white/95 has-[:checked]:font-bold hover:bg-slate-200 hover:text-neutral-800 transition-all cursor-pointer has-[:checked]:transition-all has-[:checked]:duration-500 duration-500 relative [&_p]:has-[:checked]:translate-y-0 [&_p]:has-[:checked]:transition-transform [&_p]:has-[:checked]:duration-500 [&_p]:has-[:checked]:opacity-100 overflow-hidden">
+                            <div className="inline-flex items-center justify-center gap-2 relative">
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
                                     viewBox="0 0 339.43 295.27"
